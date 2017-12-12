@@ -1,0 +1,76 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title SYNAPS
+    meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet", href="styles/css/vendor.css")
+    link(rel="stylesheet", href="styles/css/main.css")
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet")
+    //- script(src="mapbasics.js" type="text/javascript")
+  body
+
+    .page
+      
+      .empty
+
+      header.main-header
+        .grid.grid--container
+          .main-header__container
+            a(href="./pages.html").logo
+              .logo__img
+              .logo__name SYNAPS
+            .nav
+              a(href="").nav__link Мои статьи
+              a(href="").nav__link Мои сообщества
+              a(href="").nav__link Коллеги
+              a(href="").nav__link.nav__link--active Журнал
+              a(href="").nav__link Сообщения
+            form.search
+              input.search__input(type="text" placeholder="Поиск")
+              button.search__btn
+                img.svg(src="./img/search.svg" alt="")
+            .main-header__user
+              .dropdown
+                .dropdown__top
+                  .user.user--big
+                    .ava
+                      img(src="./img/user.png", alt="")
+                    .user__container
+                      a(href="").user__name Ренат
+                      .user__info Студент, 20 лет
+                .dropdown__middle
+                  a(href="").dropdown__link Профиль
+                  a(href="").dropdown__link О проекте
+                  //- a(href="").btn Написать статью
+                .dropdown__footer
+                  .logout
+                    .logout__icon
+                      img.svg(src="./img/logout.svg")
+                    a(href="") Выйти
+              .user.user--small
+                .user__container
+                  a(href="").user__name Ренат
+                .ava
+                  img(src="./img/user.png", alt="")
+
+
+      
+      .main
+
+        block content
+
+      footer.main-footer
+        .grid.grid--container
+          p footer
+
+
+
+    script(src="./js/jquery-2.2.1.min.js")
+    script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+    script(src="//yastatic.net/share2/share.js")
+    script(src="./js/select2.min.js")
+    script(src="./js/jquery.magnific-popup.min.js")
+    script(src="./js/main.js")

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic')
+
+@import 'helpers/variables.styl'
+@import 'helpers/mixins.styl'
+@import 'helpers/helpers.styl'
+
+@import 'base/base.styl'
+@import 'base/ui.styl'
+@import 'base/table.styl'
+@import 'base/typography.styl'
+@import 'base/animations.styl'
+@import 'base/icons.styl'
+@import 'base/modal.styl'
+
+@import 'components/post.styl'
+@import 'components/block.styl'
+@import 'components/user.styl'
+@import 'components/popular.styl'
+@import 'components/tags.styl'
+@import 'components/dropdown.styl'
+
+@import 'modifications/modifications.styl'
+
+
+// .grid--container
+//   max-width 1540px
+
+// .grid--container
+//   max-width initial
+//   padding 0 (184 / 1900 * 100)%
+
+.page
+  background-color #f3f3f3
+
+.logo
+  align-items center
+  display flex
+  &__img
+    background-image url('../../img/logo.svg')
+    background-repeat no-repeat
+    background-size contain
+    display inline-block
+    height 4rem
+    margin-right 1rem
+    width 3.2rem
+  &__name
+    transform translateY(.4rem)
+
+.empty
+  display block
+  height 10rem
+
+.main-header
+  background-color #fff
+  border-bottom $border
+  cursor pointer
+  display flex
+  margin-bottom 4rem
+  // padding 1.8rem 0
+  position fixed
+  top 0
+  width 100%
+  z-index 20
+  &__container
+    align-items center
+    display flex
+    justify-content space-between
+  &__user
+    position relative
+    padding 2rem 0
+    .ava
+      margin-right 0
+    .user
+      margin-right 0
+      &__container
+        margin-right .8rem
+      &__name
+        color $main
+    &:hover
+      & > .dropdown
+        opacity 1
+        pointer-events initial
+        transform none
+
+.search
+  background-color $light-gray
+  border-radius 2.4rem
+  display flex
+  justify-content space-between
+  height 4rem
+  width 20rem
+  &__input
+    background-color transparent
+    border none
+    padding-left 2.4rem
+    width 100%
+  &__btn
+    background none
+    border none
+    cursor pointer
+    margin-right 1.6rem
+    path
+      fill $main
+    &:hover
+      path
+        fill $primary
+  .svg
+    width 1.4rem
+
+.nav
+  &__link
+    height 100%
+    transition color .2s ease
+    &:hover
+      color $primary
+    &--active
+      font-weight 500
+      position relative
+      &:after
+        background-color $primary
+        bottom -3.2rem
+        content ''
+        height 2px
+        left -20%
+        position absolute
+        width 140%
+    &:not(:last-child)
+      margin-right 4rem
+
+.main
+  display block
+
+.date
+  color $gray
+  font-size 1.4rem
+  margin-right 2.4rem
+
+.rating
+  .stars
+    display inline-flex
+    margin-right .6rem
+    vertical-align middle
+    .star
+      color $light-gray
+      display inline-block
+      margin 0
+      margin-right 2px
+      &--active
+        .fa
+          color $yellow
+  &__number
+    display inline-block
+    font-size 1.4rem
+    vertical-align middle
+
+.status
+  color $green
+  font-size 1.4rem
+
+.share
+  margin-bottom 3.2rem
+
+
+@import 'base/media.styl'
+
+

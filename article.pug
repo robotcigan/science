@@ -1,0 +1,105 @@
+extends layout.pug
+
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--lg-8
+        .post.post--small.block
+          include post-top.pug
+          .post__middle
+            a(href="").post__title Опыт лечения рака предстательной железы в Клинике Башкирского государственного медицинского университета
+            .tags
+              .tag.tag--red Медицина
+              .tag.tag--green Лечение рака
+              .tag Современная медицина
+            a(href="").post__img
+              img(src="./img/post-1.jpg", alt="")
+            .tabs
+              .tabs__header
+                .tabs__link.tabs__link--active
+                  .tabs__icon
+                    img.svg(src="./img/check.svg")
+                  span Сбор данных
+                .tabs__link
+                  .tabs__icon
+                    img.svg(src="./img/check.svg")
+                  span Статическая информация
+                .tabs__link
+                  .tabs__icon.tabs__icon--red
+                    img.svg(src="./img/cross.svg")
+                  span Выводы
+
+              .tabs__content.tabs__content--active
+                p Бессознательное иллюстрирует латентный субъект. Как было показано выше, код гомогенно интегрирует филосовский тест. Кризис отчуждает индивидуальный психоанализ. Импульс сложен. Эриксоновский гипноз пространственно притягивает социометрический интеллект. Стимул вызывает страх.
+                p Интеллект начинает стимул, как и предсказывают практические аспекты использования принципов гештальпсихологии в области восприятия, обучения, развития психики, социальных взаимоотношений. Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возникает с ситуации несоответствия желаемого и действительного, поэтому чувство дает коллективный эгоцентризм. НЛП позволяет вам точно определить какие изменения в субьективном опыте надо произвести, чтобы интроекция отчуждает понимающий гомеостаз. Действие вызывает конфликтный страх, также это подчеркивается в труде Дж.Морено "Театр Спонтанности". Парадигма отчуждает аутизм.
+                p Этот концепт элиминирует концепт «нормального», однако самонаблюдение латентно. Поведенческая терапия, несмотря на внешние воздействия, откровенна. Структурный голод столь же важен для жизни, как и интроекция параллельна.
+                p Бессознательное иллюстрирует латентный субъект. Как было показано выше, код гомогенно интегрирует филосовский тест. Кризис отчуждает индивидуальный психоанализ. Импульс сложен. Эриксоновский гипноз пространственно притягивает социометрический интеллект. Стимул вызывает страх.
+                p Интеллект начинает стимул, как и предсказывают практические аспекты использования принципов гештальпсихологии в области восприятия, обучения, развития психики, социальных взаимоотношений. Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возникает с ситуации несоответствия желаемого и действительного, поэтому чувство дает коллективный эгоцентризм. НЛП позволяет вам точно определить какие изменения в субьективном опыте надо произвести, чтобы интроекция отчуждает понимающий гомеостаз. Действие вызывает конфликтный страх, также это подчеркивается в труде Дж.Морено "Театр Спонтанности". Парадигма отчуждает аутизм.
+                p Этот концепт элиминирует концепт «нормального», однако самонаблюдение латентно. Поведенческая терапия, несмотря на внешние воздействия, откровенна. Структурный голод столь же важен для жизни, как и интроекция параллельна.
+              .tabs__content
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facere explicabo optio corporis delectus rem? Nesciunt doloremque tempore eligendi neque labore, soluta cum saepe, animi id ipsum explicabo sed asperiores.
+              .tabs__content
+                p Эта часть статьи пока не написана
+
+
+          include share.pug
+
+          include post-footer.pug
+
+
+      .col.col--lg-4
+        .popular.block
+          .block__label Самое популярное за месяц
+          a(href="").popular__img
+            img(src="./img/popular.jpg", alt="")
+          .popular__container
+            a(href="").popular__title Будущее кибернетических протезов или как удешевить производство в 2 раза?
+            include postinfo.pug
+            a(href="").btn.btn--green Подробнее
+        //- .block
+        //-   .block__label Коллеги
+        //-   .block__container
+        //-     - for (var i = 0; i < 3; i++)
+        //-       .user
+        //-         .ava
+        //-           img(src="./img/user.png", alt="")
+        //-         .user__container
+        //-           a(href="").user__name Гарипов Ренат
+        //-           .user__info Студент, 20 лет
+
+        .block
+          .block__label Теги
+          .block__container
+            .tags.tags--without-margin
+              .tag.tag--red Медицина
+              .tag Альтернативная медицина
+              .tag.tag--green Лечение рака
+              .tag Современная медицина
+              .tag Исторические открытия
+              .tag New York science
+
+        //- VK Widget
+        script(type="text/javascript" src="//vk.com/js/api/openapi.js?150")
+        .block
+          #vk_groups
+        script.
+          VK.Widgets.Group("vk_groups", {mode: 3, width: "full"}, 20003922);
+
+        //- Facebook widget
+        script.
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+
+        .block
+          .fb-page(data-href="https://www.facebook.com/facebook" data-width="380"  data-hide-cover="false" data-show-facepile="false")
+  
+
+
+

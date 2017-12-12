@@ -1,0 +1,57 @@
+extends layout.pug
+
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--lg-8
+        .post.post--small.block
+          include post-top.pug
+          .post__middle
+            a(href="").post__title Опыт лечения рака предстательной железы в Клинике Башкирского государственного медицинского университета
+            .tags
+              .tag.tag--red Медицина
+              .tag.tag--green Лечение рака
+              .tag Современная медицина
+
+          include post-footer.pug
+
+
+      .col.col--lg-4
+        .popular.block
+          .block__label Самое популярное за месяц
+          a(href="").popular__img
+            img(src="./img/popular.jpg", alt="")
+          .popular__container
+            a(href="").popular__title Будущее кибернетических протезов или как удешевить производство в 2 раза?
+            include postinfo.pug
+            a(href="").btn.btn--green Подробнее
+        .block
+          .block__label Коллеги
+          .block__container
+            .users
+              - for (var i = 0; i < 8; i++)
+                .user.user--big.user--vertical
+                  .ava
+                    img(src="./img/user.png", alt="")
+                  .user__container
+                    a(href="").user__name Ренат
+            a(href="#collegs").more.modal-open
+              .more__text Показать коллег
+              .more__icon
+                img.svg(src="./img/plus.svg")
+
+
+  #collegs.modal
+    .modal__title Коллеги
+    .users
+      - for (var i = 0; i < 24; i++)
+        .user.user--huge.user--vertical
+          .ava
+            img(src="./img/user.png", alt="")
+          .user__container
+            a(href="").user__name Ренат
+
+
+

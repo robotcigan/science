@@ -1,0 +1,26 @@
+.tags
+  display flex
+  flex-wrap wrap
+  margin-bottom 1.6rem
+  &--without-margin
+    margin-bottom 0
+  .tag
+    background-color rgba($primary, .1)
+    border-radius $radius
+    cursor pointer
+    display inline-block
+    font-size 1.4rem
+    margin-bottom .8rem
+    margin-right .8rem
+    padding .8rem
+    transition background-color .2s ease
+    &:hover
+      background-color rgba($primary, .15)
+    &--red
+      background-color rgba($red, .1)
+      &:hover
+        background-color rgba($red, .15)
+    &--green
+      background-color rgba($green, .1)
+      &:hover
+        background-color rgba($green, .15)

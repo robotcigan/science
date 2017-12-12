@@ -1,0 +1,64 @@
+.ava
+  border-radius 50%
+  circle(4.8rem)
+  flex-shrink 0
+  overflow hidden
+  img
+    max-width 100%
+
+.user
+  align-items center
+  display flex
+  margin-right 2.4rem
+  .ava
+    margin-right 1rem
+  &__name
+    color $primary
+    flex-shrink 0
+    font-size 1.6rem
+  &__info
+    color $gray
+    font-size 1.4rem
+    flex-shrink 0
+  &__name + .user__info
+    margin-top .8rem
+  &--small
+    .ava
+      circle(4rem)
+    &__name
+      font-size 1.4rem
+  &--big
+    .ava
+      circle(6.4rem)
+    &__name
+      font-size 1.4rem
+  &--huge
+    .ava
+      circle(8.8rem)
+    &__name
+      font-size 1.6rem
+  & + .user
+    margin-top 2.4rem
+  
+  &--vertical
+    display inline-flex
+    flex-direction column
+    justify-content center
+    // margin-right 0
+    margin-bottom 1.6rem
+    margin-right 1.6rem
+    .ava
+      margin-bottom .8rem
+      margin-right 0
+    & + .user
+      margin-top 0
+  // &--vertical
+  //   &:nth-of-type(4n)
+  //     margin-bottom 1.6rem
+  //   &:last-child
+  //     margin-bottom 0
+  //   &:not(:nth-of-type(4n))
+  //     margin-right 2rem
+
+.users
+  margin-right -1.6rem

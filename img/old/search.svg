@@ -1,0 +1,38 @@
+<svg width="12" height="12" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>magnifying-glass (5)</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-5417 -33)">
+<rect x="5417" y="33" width="12" height="12" fill="#E5E5E5"/>
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 4320 0L 5720 0L 5720 2811L 4320 2811L 4320 0Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="&#208;&#150;&#209;&#131;&#209;&#128;&#208;&#189;&#208;&#176;&#208;&#187;" clip-path="url(#clip-0)">
+<path d="M 4320 0L 5720 0L 5720 2811L 4320 2811L 4320 0Z" fill="#F3F3F3"/>
+<g id="Rectangle">
+<use xlink:href="#path0_fill" transform="translate(4320 0)" fill="#FFFFFF"/>
+</g>
+<g id="header">
+<g id="Rectangle 3">
+<use xlink:href="#path0_fill" transform="translate(4320 0)" fill="#FFFFFF"/>
+</g>
+<g id="search">
+<g id="Rectangle 2">
+<use xlink:href="#path1_fill" transform="translate(5254 18)" fill="#F5F5F5"/>
+</g>
+<g id="magnifying-glass (5)">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(5417 33)"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 1400 0L 1400 75L 0 75L 0 0Z"/>
+<path id="path1_fill" d="M 0 20C 0 8.95431 8.95431 0 20 0L 180 0C 191.046 0 200 8.95431 200 20C 200 31.0457 191.046 40 180 40L 20 40C 8.95431 40 0 31.0457 0 20Z"/>
+<path id="path2_fill" d="M 11.8531 11.1478L 8.96816 8.26286C 9.68327 7.39102 10.1143 6.27429 10.1143 5.05714C 10.1143 2.26531 7.84898 0 5.05714 0C 2.26286 0 0 2.26531 0 5.05714C 0 7.84898 2.26286 10.1143 5.05714 10.1143C 6.27429 10.1143 7.38857 9.68571 8.26041 8.97061L 11.1453 11.8531C 11.3412 12.049 11.6571 12.049 11.8531 11.8531C 12.049 11.6596 12.049 11.3412 11.8531 11.1478ZM 5.05714 9.10775C 2.82122 9.10775 1.00408 7.29061 1.00408 5.05714C 1.00408 2.82367 2.82122 1.00408 5.05714 1.00408C 7.29061 1.00408 9.1102 2.82367 9.1102 5.05714C 9.1102 7.29061 7.29061 9.10775 5.05714 9.10775Z"/>
+</defs>
+</svg>

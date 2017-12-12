@@ -1,0 +1,45 @@
+.post
+  background-color #fff
+  border $border
+  padding 0 3.2rem
+  &__top
+    align-items center
+    display flex
+    justify-content space-between
+    margin-bottom 1.6rem
+    padding-top 3.2rem
+    &-left
+      align-items center
+      display flex
+  &__title
+    color $main
+    display block
+    font-size 2.4rem
+    font-weight 500
+    line-height 1.4
+    margin-bottom 2.4rem
+    &:hover
+      color $primary
+  &__img
+    display block
+    margin 0 -3.2rem
+    // margin-bottom 2.4rem
+    margin-bottom .8rem
+    max-height 35rem
+    overflow hidden
+    &:hover
+      img
+        transform scale(1.015)
+    img
+      transition transform .3s ease
+      width 100%
+  &__anons
+    margin-top 2.4rem
+  &__number
+    display block
+  &__footer
+    border-top $border
+    display flex
+    justify-content space-between
+    margin 0 -3.2rem
+    padding 2.4rem 3.2rem
