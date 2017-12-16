@@ -2,6 +2,19 @@
 
 $(document).ready(function () {
 
+  // Закрепленная шапка
+  function mainHeaderScroll() {
+    if ($(window).scrollTop() > 20) {
+      $('.main-header').addClass('main-header--scroll');
+    } else {
+      $('.main-header').removeClass('main-header--scroll');
+    }
+  }
+
+  $(window).scroll(function () {
+    mainHeaderScroll();
+  });
+
   // Модальное окно
   $('.modal-open').magnificPopup({
     type: 'inline'

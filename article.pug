@@ -48,6 +48,25 @@ block content
 
           include post-footer.pug
 
+        .block
+          .block__label Комментарии
+            span 5
+          .block__container
+            - for (var i = 0; i < 4; i++)
+              .comment
+                a(href="").ava
+                  img(src="./img/user.png", alt="")
+                .comment__container
+                  .comment__top
+                    a(href="").comment__name Савельев Алексей
+                    .date 12 сентября 2017
+                  p.comment__text Прекрасная работа. Я думаю буду следить за прогрессом этого исследования и с удовольствием бы присоединился к вашей команде. Я надеюсь вы сможете найти спонсоров на ваш проект и продолжите развивать это направление в дальнейшем.
+
+          include write.pug
+
+
+
+
 
       .col.col--lg-4
         .popular.block
@@ -102,4 +121,17 @@ block content
   
 
 
-
+      
+    .popular-block
+      .popular-block__title
+        img.svg(src="./img/fire.svg", alt="")
+        span Популярные материалы
+      .row
+        - for (var i = 0; i < 3; i++)
+          .col.col--lg-4
+            .popular.block
+              a(href="").popular__img
+                img(src="./img/popular.jpg", alt="")
+              .popular__container
+                a(href="").popular__title Будущее кибернетических протезов или как удешевить производство в 2 раза?
+                include postinfo.pug
