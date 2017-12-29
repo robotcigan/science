@@ -2,6 +2,11 @@
 
 $(document).ready(function () {
 
+  // mobile menu
+  $('.mobile-toggle').on('click', function () {
+    $(this).toggleClass('mobile-toggle--active');
+  });
+
   // Закрепленная шапка
   function mainHeaderScroll() {
     if ($(window).scrollTop() > 20) {

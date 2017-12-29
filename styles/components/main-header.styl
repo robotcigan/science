@@ -81,3 +81,73 @@
         width 140%
     &:not(:last-child)
       margin-right 4rem
+
+$bar-width = 2.4rem
+$bar-height = 2px
+$bar-spacing = .8rem
+
+.mobile-toggle
+  display none
+  width: $bar-width
+  height: $bar-height + $bar-spacing*2
+  cursor: pointer
+  &--active
+    .bar
+      background transparent
+      &:before
+        bottom: 0
+        transform: rotate(-45deg)
+        transition: bottom .3s cubic-bezier(0.23, 1, 0.32, 1), transform .3s .3s cubic-bezier(0.23, 1, 0.32, 1)
+      &:after
+        top: 0
+        transform: rotate(45deg)
+        transition: top .3s cubic-bezier(0.23, 1, 0.32, 1), transform .3s .3s cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.bar,
+.bar:after,
+.bar:before
+  width: $bar-width
+  height: $bar-height
+
+
+.bar
+  background-color $main
+  position: relative
+  transform: translateY($bar-spacing)
+  transition: all 0 .3s
+  
+
+
+.bar:before
+  content: ""
+  position: absolute
+  left: 0
+  bottom: $bar-spacing
+  background: $main
+  transition: bottom .3s .3s cubic-bezier(0.23, 1, 0.32, 1), transform .3s cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.bar:after
+  content: ""
+  position: absolute
+  left: 0
+  top: $bar-spacing
+  background: $main
+  transition: top .3s .3s cubic-bezier(0.23, 1, 0.32, 1), transform .3s cubic-bezier(0.23, 1, 0.32, 1)
+
+
+
+@media(max-width 1200px)
+  .mobile-toggle
+    display none
+  .nav
+    display none
+  .search
+    display none
+
+
+@media(max-width 768px)
+  .main-header
+    &__user
+      padding 1.6rem 0

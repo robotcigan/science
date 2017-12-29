@@ -1,4 +1,19 @@
-.comment
+.messages
+  display flex
+  justify-content space-between
+  &__left
+    border-right $border
+    flex-shrink 0
+    max-width 37rem
+    overflow hidden
+    .user
+      border-bottom $border
+      margin 0
+      padding 2.4rem
+      &__container
+        max-width 80%
+
+.message
   display flex
   &__container
     padding-left 2rem

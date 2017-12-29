@@ -106,6 +106,10 @@ body * {
 .btn:hover {
   background-color: #166ead;
 }
+.btn--small {
+  font-weight: 400;
+  padding: 1rem 1.2rem;
+}
 .btn--full-size {
   padding: 2.2rem 3rem;
   text-align: center;
@@ -578,6 +582,9 @@ p {
   .subheader-btn {
     text-align: left;
   }
+  p {
+    font-size: 1.4rem;
+  }
 }
 @-webkit-keyframes bigFadeUp {
   0% {
@@ -842,6 +849,93 @@ p {
 .nav__link:not(:last-child) {
   margin-right: 4rem;
 }
+.mobile-toggle {
+  display: none;
+  width: 2.4rem;
+  height: 3.6px;
+  cursor: pointer;
+}
+.mobile-toggle--active .bar {
+  background: transparent;
+}
+.mobile-toggle--active .bar:before {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transition: bottom 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mobile-toggle--active .bar:after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: top 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.bar,
+.bar:after,
+.bar:before {
+  width: 2.4rem;
+  height: 2px;
+}
+.bar {
+  background-color: #111;
+  position: relative;
+  -webkit-transform: translateY(0.8rem);
+  -ms-transform: translateY(0.8rem);
+  transform: translateY(0.8rem);
+  transition: all 0 0.3s;
+}
+.bar:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.8rem;
+  background: #111;
+  transition: bottom 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.bar:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  background: #111;
+  transition: top 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@media (max-width: 1200px) {
+  .mobile-toggle {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .main-header__user {
+    padding: 1.6rem 0;
+  }
+}
+.posts-links {
+  background-color: rgba(26,130,203,0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.2rem 2.4rem;
+}
 .post {
   background-color: #fff;
   border: 1px solid #eee;
@@ -913,6 +1007,51 @@ p {
   justify-content: space-between;
   margin: 0 -3.2rem;
   padding: 2.4rem 3.2rem;
+}
+@media (max-width: 768px) {
+  .post {
+    padding: 0 1.6rem;
+  }
+  .post__top {
+    display: block;
+    padding-top: 1.6rem;
+  }
+  .post__top-left {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .post__top-left .user {
+    margin-bottom: 1.6rem;
+    margin-right: 0;
+    width: 50%;
+  }
+  .post__top-left .date {
+    margin-bottom: 1.6rem;
+    margin-right: 0;
+    height: 4rem;
+    padding-top: 1.2rem;
+    text-align: right;
+    width: 50%;
+  }
+  .post__top-left .status {
+    display: block;
+    margin-bottom: 1.6rem;
+    width: 100%;
+  }
+  .post__title {
+    font-size: 1.6rem;
+  }
+  .post__img {
+    margin: 0 -1.6rem;
+  }
+  .post__footer {
+    margin: 0 -1.6rem;
+    padding: 1.6rem;
+  }
 }
 .block {
   background-color: #fff;
@@ -990,6 +1129,14 @@ p {
   height: 1.6rem;
   width: 1.6rem;
 }
+@media (max-width: 768px) {
+  .block__label {
+    padding: 1.6rem;
+  }
+  .block__container {
+    padding: 1.6rem;
+  }
+}
 .user {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1013,6 +1160,13 @@ p {
   font-size: 1.4rem;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+.user__message {
+  margin-top: 0.8rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .user__name + .user__info {
   margin-top: 0.8rem;
@@ -1191,6 +1345,11 @@ p {
 .popular .block__info {
   margin-bottom: 2.4rem;
 }
+@media (max-width: 768px) {
+  .popular__title {
+    font-size: 1.6rem;
+  }
+}
 .tags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1291,15 +1450,38 @@ p {
 .logout:hover path {
   fill: #1a82cb;
 }
-.comment {
+.messages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.messages__left {
+  border-right: 1px solid #eee;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  max-width: 37rem;
+  overflow: hidden;
+}
+.messages__left .user {
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  padding: 2.4rem;
+}
+.messages__left .user__container {
+  max-width: 80%;
+}
+.message {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.comment__container {
+.message__container {
   padding-left: 2rem;
 }
-.comment__top {
+.message__top {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1309,15 +1491,15 @@ p {
   margin-bottom: 1.2rem;
   padding-top: 0.8rem;
 }
-.comment__name {
+.message__name {
   font-weight: 500;
   margin-right: 1.6rem;
   transition: color 0.3s ease;
 }
-.comment__name:hover {
+.message__name:hover {
   color: #1a82cb;
 }
-.comment .date {
+.message .date {
   font-size: 1.2rem;
 }
 .write {
@@ -1618,6 +1800,19 @@ p {
 .ava img {
   height: 100%;
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .grid.grid--container {
+    padding: 0 1.6rem;
+  }
+  .main-header .logo {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .grid.grid--container {
+    padding: 0 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
