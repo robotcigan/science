@@ -18,6 +18,7 @@
   &:hover
     background-color $primary - 15%
   &--small
+    font-size 1.3rem
     font-weight 400
     padding 1rem 1.2rem
   &--full-size
@@ -43,31 +44,23 @@
         display none !important
 
 .form-control
+  border-bottom 2px solid rgba($primary, .2)
   // min-height 5rem
-  margin-bottom 1.6rem
+  margin-bottom 2.4rem
   position relative
-  &__icon
-    color $primary
-    font-size 2.2rem
-    position absolute
-    right 2rem
-    top 5rem
-    .fa
-      transition all .2s
-  &__text
-    color #d9e5ea
-    position absolute
-    right 2rem
-    top 5.2rem
   label
-    color $main
+    color $gray
     cursor text
-    display inline-block
-    line-height 1
-    font-weight 500
-    margin-bottom 1.8rem
+    left 0
+    position absolute
+    pointer-events none
+    top 2rem
     transition all .2s
     max-width 100%
+    &.form-control__label--active
+      color $main
+      font-size 1.2rem
+      top 0
   input[type="text"],
   input[type="password"],
   input[type="date"],
@@ -76,29 +69,28 @@
   input[type="number"],
   select,
   textarea,
-  .select2-selection--single
+  .select2-selection--single,
+  .select2-selection--multiple
+  .select2-container--focus
     background #fff
-    border 1px solid #eaeaea
-    border-radius $radius
+    border 0 !important
+    border-radius 4px
     display block
     font-family $font
-    font-size 1.8rem
-    line-height 1
-    // min-height 4rem
+    font-size 1.6rem
     transition border-color .2s
-    padding 1.6rem 2rem
+    padding 1.4rem 0
     position relative
     resize vertical
     width 100%
     -webkit-appearance none
-    // &:focus
-    //   border-color $primary
-    //   & + .form-control__icon
-    //     transform rotate(180deg)
+    &:focus
+      & + label
+        font-size 1.2rem
+        top 0
   textarea
     height 100%
     min-height 12rem
-
   .select2-container--open + .form-control__icon
       transform rotate(180deg)
   &--error
@@ -116,22 +108,6 @@
       color $error
     .form-control__icon
       color $error
-  
-  &--inline
-    align-items center
-    display flex
-    justify-content space-between
-    label
-      flex-shrink 0
-      margin-bottom 0
-      margin-right 5rem
-    input,
-    select,
-    .select2-selection--single
-      max-width 40%
-    .form-control
-      &__text
-        top 1.8rem
 
 
 .select2
@@ -140,12 +116,22 @@
       display none
   &-dropdown
     border $border
+    width 100%
   &-selection
     &--single
       height initial !important
     &__rendered
       line-height 1.2 !important
       padding-left 0 !important
+    &__choice
+      background-color rgba($primary, .1) !important
+      border 0 !important
+      font-size 1.4rem !important
+      margin 0 !important
+      margin-right .8rem !important
+      padding .4rem .8rem !important
+      &__remove
+        font-weight 300 !important
   &-results__option
     padding 1.2rem
     padding-left 2rem

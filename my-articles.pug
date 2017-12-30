@@ -8,10 +8,10 @@ block content
       .col.col--lg-8
         .posts-links
           .links
-            a.link(href="") Активные
+            a.link.link--active(href="") Активные
             a.link(href="") Готовые
           .buttons
-            #new-article.btn.btn--small Написать статью
+            a(href="#new-article").btn.btn--small.modal-open Написать статью
         - for (var i = 0; i < 9; i++)
           .post.post--small.block
             include post-top.pug
@@ -63,13 +63,63 @@ block content
 
   #collegs.modal
     .modal__title Коллеги
-    .users
-      - for (var i = 0; i < 24; i++)
-        .user.user--huge.user--vertical
-          .ava
-            img(src="./img/user.png", alt="")
-          .user__container
-            a(href="").user__name Ренат
+    .modal__container
+      .users
+        - for (var i = 0; i < 24; i++)
+          .user.user--huge.user--vertical
+            .ava
+              img(src="./img/user.png", alt="")
+            .user__container
+              a(href="").user__name Ренат
 
-
+  #new-article.modal
+    .modal__title Написать статью
+    .modal__container
+      form
+        .form-control
+          input(type="text")
+          label Название статьи
+        .thumbnail
+          .thumbnail__icon
+            img.svg(src="./img/thumbnail.svg", alt="")
+          .thumbnail__text Выберите изображение для обложки статьи
+        .form-control
+          select(multiple="multiple").custom-select.custom-select--multi
+            option Медицина
+            option Современная медицина
+            option Альтернативная медицина
+          label Научная область
+        .form-control
+          input(type="text")
+          label Научный руководитель
+        .form-control
+          input(type="text")
+          label ВУЗ
+        .tabs
+          .tabs__header
+            .tabs__link.tabs__link--active
+              .tabs__icon
+                img.svg(src="./img/check.svg")
+              span Сбор данных
+            .tabs__link
+              .tabs__icon
+                img.svg(src="./img/check.svg")
+              span Статическая информация
+            .tabs__link
+              .tabs__icon.tabs__icon--red
+                img.svg(src="./img/cross.svg")
+              span Выводы
+          .tabs__content.tabs__content--active
+            .form-control
+              textarea
+              label Текст
+          .tabs__content
+            .form-control
+              textarea
+              label Текст
+          .tabs__content
+            .form-control
+              textarea
+              label Текст
+        .btn Опубликовать
 

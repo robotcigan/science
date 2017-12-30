@@ -1,5 +1,28 @@
 $(document).ready(function() {
 
+  // Custom select
+  $('.custom-select').select2({
+    dropdownAutoWidth : true,
+    maximumSelectionLength: 5,
+    width: '100%'
+  });
+
+  // Поля
+  $('.form-control input').on('keyup change', function () {
+    formValidation($(this));
+  });
+  $('.form-control textarea').on('keyup change', function () {
+    formValidation($(this));
+  });
+
+  function formValidation (self) {
+    if ( self.val().length || self.text().length ) {
+      self.parent().find('label').addClass('form-control__label--active');
+    } else {
+      self.parent().find('label').removeClass('form-control__label--active');
+    }
+  }
+
   // mobile menu
   $('.mobile-toggle').on('click', function() {
     $(this).toggleClass('mobile-toggle--active');

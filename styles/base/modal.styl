@@ -2,17 +2,16 @@
   animation bigFadeUp .3s forwards ease
   background #fff
   box-shadow 0 1rem 2rem rgba($main, .1)
-  border-radius $radius 0 $radius $radius
+  border-radius $radius
   display none
-  margin 10rem auto
-  padding 3.2rem
+  margin 4rem auto
   position relative
   width 72rem
   &__title
-    font-size 2.4rem
-    font-weight 500
+    background-color rgba($primary, .08)
+    font-size 1.6rem
     line-height 1
-    margin-bottom 4rem
+    padding 2.4rem 3.2rem
   &__plate
     background-color $light-gray
     margin-left -4rem
@@ -20,6 +19,8 @@
     margin-bottom 3.2rem
     margin-top -1.6rem
     padding 1.6rem 4rem
+  &__container
+    padding 3.2rem
   &--without-border
     background-color transparent
     box-shadow none
@@ -45,12 +46,13 @@
 .mfp-close-btn-in .mfp-close:active
   // background-color $primary
   circle(4rem)
-  color $main
-  font-size 4rem
+  color rgba($main, .8)
+  font-size 3.2rem
+  font-weight 300
   opacity 1
   padding 0
   text-align center
-  top 2.9rem
+  top .8rem
   right 2.4rem
 
 .mfp-close
@@ -65,6 +67,16 @@
   right -5.6rem
   top 2.8rem
 
+
+.thumbnail
+  border 2px dashed rgba($primary, .2)
+  display block
+  margin-bottom 2.4rem
+  margin-top 2.4rem
+  padding 8rem 0
+  text-align center
+  .svg
+    margin-bottom 2.4rem
 
   
 

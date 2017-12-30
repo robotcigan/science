@@ -1,8 +1,26 @@
 .posts-links
-  background-color rgba($primary, .1)
+  align-items center
+  background-color rgba($primary, .05)
   display flex
   justify-content space-between
   padding 1.2rem 2.4rem
+  padding-left 0
+  .link
+    display inline-block
+    padding 0 4rem
+    position relative
+    &:after
+      background-color $primary
+      bottom -2.2rem
+      content ''
+      display none
+      height 2px
+      left 0
+      position absolute
+      width 100%
+    &--active
+      &:after
+        display block
 
 .post
   background-color #fff

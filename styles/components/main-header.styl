@@ -11,7 +11,7 @@
   // padding 1.8rem 0
   position fixed
   top 0
-  transition box-shadow .3s ease
+  transition all .3s ease
   width 100%
   z-index 20
   &__container
@@ -20,7 +20,8 @@
     justify-content space-between
   &__user
     position relative
-    padding 2rem 0
+    padding 1.4rem 0
+    transition padding .2s ease
     .ava
       margin-right 0
     .user
@@ -64,6 +65,7 @@
 
 .nav
   &__link
+    font-size 1.4rem
     height 100%
     transition color .2s ease
     &:hover
@@ -73,14 +75,14 @@
       position relative
       &:after
         background-color $primary
-        bottom -3.2rem
+        bottom -2.4rem
         content ''
         height 2px
         left -20%
         position absolute
         width 140%
     &:not(:last-child)
-      margin-right 4rem
+      margin-right 3.2rem
 
 $bar-width = 2.4rem
 $bar-height = 2px
@@ -139,6 +141,9 @@ $bar-spacing = .8rem
 
 
 @media(max-width 1200px)
+  // .main-header
+  //   .logo
+  //     display none
   .mobile-toggle
     display none
   .nav
