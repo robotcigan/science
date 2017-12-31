@@ -1,6 +1,5 @@
 .dropdown
   background-color #fff
-  bottom -22.5rem
   border $border
   border-radius $radius
   box-shadow $shadow
@@ -9,6 +8,7 @@
   position absolute
   pointer-events none
   right 0
+  top 6.8rem
   transform translateY(.8rem)
   transition all .3s ease
   z-index 50
@@ -31,6 +31,10 @@
       background-color rgba($primary, .05)
     // &:not(:last-child)
     //   border-bottom $border
+  &__close
+    position absolute
+    right 1.6rem
+    top 1.6rem
 
 .logout
   align-items center

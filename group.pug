@@ -1,0 +1,66 @@
+extends layout.pug
+
+
+block content
+  
+  .grid.grid--container
+
+    .group
+      .group__wallpaper(style="background-image: url(./img/group.jpg)")
+      .group__bottom
+        .user
+          .ava
+            img(src="./img/popular.jpg", alt="")
+          .user__container
+            a(href="").user__name Современная медицина
+            .user__info 1 234 участника
+        .btn.btn--micro Подписаться
+
+    .row
+      .col.col--lg-8
+        .block
+          .block__label О сообществе
+          .block__container
+            p Dribbble – сообщество дизайнеров, которые показывают свои проекты и процесс. Здесь публикуются избранные работы с платформы, обучающие и рабочие материалы для дизайнеров.
+        .post.post--small.block
+          include post-top.pug
+          .post__middle
+            a(href="").post__title Опыт лечения рака предстательной железы в Клинике Башкирского государственного медицинского университета
+            .tags
+              .tag.tag--red Медицина
+              .tag.tag--green Лечение рака
+              .tag Современная медицина
+            a(href="").post__img
+              img(src="./img/post-1.jpg", alt="")
+            p.post__anons Бессознательное иллюстрирует латентный субъект. Как было показано выше, код гомогенно интегрирует филосовский тест. Кризис отчуждает индивидуальный психоанализ. Импульс сложен. Эриксоновский гипноз пространственно притягивает социометрический интеллект. Стимул вызывает страх.
+
+          include share.pug
+
+          include post-footer.pug
+
+
+      .col.col--lg-4
+        .block
+          a(href="#collegs").block__label.modal-open Подписчики 
+            span 12
+          .block__container
+            .users
+              - for (var i = 0; i < 8; i++)
+                .user.user--big.user--vertical
+                  .ava
+                    img(src="./img/user.png", alt="")
+                  .user__container
+                    a(href="").user__name Ренат
+        .block
+          a(href="#collegs").block__label.modal-open Контакты 
+          .block__container
+            .user
+              .ava
+                img(src="./img/user.jpg", alt="")
+              .user__container
+                a(href="").user__name Елена Темникова
+                .user__info Администратор
+  
+
+
+

@@ -36,7 +36,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="dropdown__middle"><a class="dropdown__link" href="">Профиль</a><a class="dropdown__link" href="">О проекте</a></div>
+                <div class="dropdown__middle"><a class="dropdown__link" href="./profile.html">Профиль</a><a class="dropdown__link" href="./articles.html">Мои статьи</a><a class="dropdown__link" href="./groups.html">Мои сообщества</a><a class="dropdown__link" href="./friends.html">Коллеги</a><a class="dropdown__link" href="./about.html">О проекте</a></div>
                 <div class="dropdown__footer">
                   <div class="logout">
                     <div class="logout__icon"><img class="svg" src="./img/logout.svg"></div><a href="">Выйти</a>
@@ -54,21 +54,30 @@
       <div class="main">
         <div class="profile">
           <div class="grid grid--container">
-            <div class="profile__photo">
-              <div class="photo" style="background-image: url(./img/user.png);"></div>
-              <div class="btn">Изменить фотографию</div>
-            </div>
-            <div class="profile__container">
-              <div class="profile__name">Гарипов Ренат Русланович</div>
-              <div class="profile__study">Башкирский государственный медицинский университет (БГМУ), 2019</div>
-              <div class="profile__who">Студент, 20 лет</div>
-              <div class="profile__tags">Медицина, Альтернативная медицина, Современная медицина, Лечение рака</div>
+            <div class="profile__flex">
+              <div class="profile__photo">
+                <div class="photo" style="background-image: url(./img/user.png);"></div><a class="btn btn--full-size modal-open" href="#photo-edit">Изменить фотографию</a>
+              </div>
+              <div class="profile__container">
+                <div class="profile__name">Гарипов Ренат Русланович</div>
+                <div class="profile__study">Башкирский государственный медицинский университет (БГМУ), 2019</div>
+                <div class="profile__who">Студент, 20 лет</div>
+                <div class="profile__tags">Медицина, Альтернативная медицина, Современная медицина, Лечение рак, Альтернативная медицина</div><a class="btn btn--small btn--secondary modal-open" href="#profile-edit">Редактировать</a><a class="btn btn--small modal-open" href="#new-article">Написать статью</a>
+              </div>
             </div>
           </div>
+          <div class="profile__bottom"></div>
         </div>
         <div class="grid grid--container">
           <div class="row">
             <div class="col col--lg-8">
+              <form class="write">
+                <input class="write__input" type="text" placeholder="Написать сообщение...">
+                <div class="write__right">
+                  <button class="write__attach"><img class="svg" src="./img/attach.svg" alt=""></button>
+                  <button class="write__send"><img class="svg" src="./img/send.svg" alt=""></button>
+                </div>
+              </form>
               <div class="post post--small block">
                 <div class="post__top">
                   <div class="post__top-left">
@@ -118,12 +127,9 @@
                     </div>
                   </div>
                   <div class="post__footer-right">
-                    <div class="block__info">
-                      <div class="item item--share">
+                    <div class="block__info"><a class="item item--share modal-open" href="#post-share">
                         <div class="item__icon"><img class="svg" src="./img/share.svg" alt=""></div>
-                        <div class="post__number">57</div>
-                      </div>
-                    </div>
+                        <div class="post__number">57</div></a></div>
                   </div>
                 </div>
               </div>
@@ -176,12 +182,9 @@
                     </div>
                   </div>
                   <div class="post__footer-right">
-                    <div class="block__info">
-                      <div class="item item--share">
+                    <div class="block__info"><a class="item item--share modal-open" href="#post-share">
                         <div class="item__icon"><img class="svg" src="./img/share.svg" alt=""></div>
-                        <div class="post__number">57</div>
-                      </div>
-                    </div>
+                        <div class="post__number">57</div></a></div>
                   </div>
                 </div>
               </div>
@@ -234,19 +237,197 @@
                     </div>
                   </div>
                   <div class="post__footer-right">
-                    <div class="block__info">
-                      <div class="item item--share">
+                    <div class="block__info"><a class="item item--share modal-open" href="#post-share">
                         <div class="item__icon"><img class="svg" src="./img/share.svg" alt=""></div>
-                        <div class="post__number">57</div>
-                      </div>
-                    </div>
+                        <div class="post__number">57</div></a></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col col--lg-4">
-              <p>right block</p>
+              <div class="block">
+                <div class="block__label">Вас пригласили в сообщество</div>
+                <div class="block__container">
+                  <div class="user">
+                    <div class="ava"><img src="./img/popular.jpg" alt=""></div>
+                    <div class="user__container"><a class="user__name" href="">Современная медицина</a>
+                      <div class="user__info">1 223 участника</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block"><a class="block__label modal-open" href="#collegs">Коллеги <span>12</span></a>
+                <div class="block__container">
+                  <div class="users">
+                    <div class="user user--big user--vertical">
+                      <div class="ava"><img src="./img/user.png" alt=""></div>
+                      <div class="user__container"><a class="user__name" href="">Ренат</a></div>
+                    </div>
+                    <div class="user user--big user--vertical">
+                      <div class="ava"><img src="./img/user.png" alt=""></div>
+                      <div class="user__container"><a class="user__name" href="">Ренат</a></div>
+                    </div>
+                    <div class="user user--big user--vertical">
+                      <div class="ava"><img src="./img/user.png" alt=""></div>
+                      <div class="user__container"><a class="user__name" href="">Ренат</a></div>
+                    </div>
+                    <div class="user user--big user--vertical">
+                      <div class="ava"><img src="./img/user.png" alt=""></div>
+                      <div class="user__container"><a class="user__name" href="">Ренат</a></div>
+                    </div>
+                    <div class="user user--big user--vertical">
+                      <div class="ava"><img src="./img/user.png" alt=""></div>
+                      <div class="user__container"><a class="user__name" href="">Ренат</a></div>
+                    </div>
+                    <div class="user user--big user--vertical">
+                      <div class="ava"><img src="./img/user.png" alt=""></div>
+                      <div class="user__container"><a class="user__name" href="">Ренат</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block"><a class="block__label modal-open" href="#collegs">Сообщества <span>12</span></a>
+                <div class="block__container">
+                  <div class="user">
+                    <div class="ava"><img src="./img/popular.jpg" alt=""></div>
+                    <div class="user__container"><a class="user__name" href="">Современная медицина</a>
+                      <div class="user__info">1 223 участника</div>
+                    </div>
+                  </div>
+                  <div class="user">
+                    <div class="ava"><img src="./img/popular.jpg" alt=""></div>
+                    <div class="user__container"><a class="user__name" href="">Современная медицина</a>
+                      <div class="user__info">1 223 участника</div>
+                    </div>
+                  </div>
+                  <div class="user">
+                    <div class="ava"><img src="./img/popular.jpg" alt=""></div>
+                    <div class="user__container"><a class="user__name" href="">Современная медицина</a>
+                      <div class="user__info">1 223 участника</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="modal" id="new-article">
+          <div class="modal__title">Написать статью</div>
+          <div class="modal__container">
+            <form>
+              <div class="form-control">
+                <input type="text">
+                <label>Название статьи</label>
+              </div>
+              <div class="thumbnail">
+                <div class="thumbnail__icon"><img class="svg" src="./img/thumbnail.svg" alt=""></div>
+                <div class="thumbnail__text">Выберите изображение для обложки статьи</div>
+              </div>
+              <div class="form-control">
+                <select class="custom-select custom-select--multi" multiple="multiple">
+                  <option>Медицина</option>
+                  <option>Современная медицина</option>
+                  <option>Альтернативная медицина</option>
+                </select>
+                <label>Научная область</label>
+              </div>
+              <div class="form-control">
+                <input type="text">
+                <label>Научный руководитель</label>
+              </div>
+              <div class="form-control">
+                <input type="text">
+                <label>ВУЗ</label>
+              </div>
+              <div class="tabs">
+                <div class="tabs__header">
+                  <div class="tabs__link tabs__link--active">
+                    <div class="tabs__icon"><img class="svg" src="./img/check.svg"></div><span>Сбор данных</span>
+                  </div>
+                  <div class="tabs__link">
+                    <div class="tabs__icon"><img class="svg" src="./img/check.svg"></div><span>Статическая информация</span>
+                  </div>
+                  <div class="tabs__link">
+                    <div class="tabs__icon tabs__icon--red"><img class="svg" src="./img/cross.svg"></div><span>Выводы</span>
+                  </div>
+                </div>
+                <div class="tabs__content tabs__content--active">
+                  <div class="form-control">
+                    <textarea></textarea>
+                    <label>Текст</label>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div class="form-control">
+                    <textarea></textarea>
+                    <label>Текст</label>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div class="form-control">
+                    <textarea></textarea>
+                    <label>Текст</label>
+                  </div>
+                </div>
+              </div>
+              <div class="btn">Опубликовать</div>
+            </form>
+          </div>
+        </div>
+        <div class="modal" id="profile-edit">
+          <div class="modal__title">Редактировать профиль</div>
+          <div class="modal__container">
+            <form>
+              <div class="form-control">
+                <input type="text">
+                <label>Фамилия</label>
+              </div>
+              <div class="form-control">
+                <input type="text">
+                <label>Имя</label>
+              </div>
+              <div class="form-control">
+                <input type="text">
+                <label>Отчество</label>
+              </div>
+              <div class="form-control">
+                <input type="text">
+                <label>Дата рождения</label>
+              </div>
+              <div class="form-control">
+                <input type="text">
+                <label>ВУЗ</label>
+              </div>
+              <div class="form-control">
+                <select class="custom-select custom-select--multi" multiple="multiple">
+                  <option>Медицина</option>
+                  <option>Современная медицина</option>
+                  <option>Альтернативная медицина</option>
+                </select>
+                <label>Научная область</label>
+              </div>
+              <div class="form-control">
+                <input type="text">
+                <label>Год выпуска</label>
+              </div>
+              <div class="form-control">
+                <input type="text">
+                <label>Место работы</label>
+              </div>
+              <div class="btn">Сохранить</div>
+            </form>
+          </div>
+        </div>
+        <div class="modal" id="photo-edit">
+          <div class="modal__title">Редактировать фотографию</div>
+          <div class="modal__container">
+            <form>
+              <div class="thumbnail">
+                <div class="thumbnail__icon"><img class="svg" src="./img/thumbnail.svg" alt=""></div>
+                <div class="thumbnail__text">Выберите изображение</div>
+              </div>
+              <div class="btn">Сохранить</div>
+            </form>
           </div>
         </div>
       </div>
@@ -255,6 +436,7 @@
           <p>footer</p>
         </div>
       </footer>
+      <div class="mobile-menu"><a class="mobile-menu__link mobile-menu__link--active" href="./magazine.html"><img class="svg" src="./img/magazines.svg" alt=""><span class="mobile-menu__link-text">Журнал</span></a><a class="mobile-menu__link" href="./groups.html"><img class="svg" src="./img/groups.svg" alt=""><span class="mobile-menu__link-text">Сообщества</span></a><a class="mobile-menu__link" href="./friends.html"><img class="svg" src="./img/colleague.svg" alt=""><span class="mobile-menu__link-text">Коллеги</span></a><a class="mobile-menu__link" href="./messages.html"><img class="svg" src="./img/messages.svg" alt=""><span class="mobile-menu__link-text">Сообщения</span></a><a class="mobile-menu__link" href="./search.html"><img class="svg" src="./img/search.svg" alt=""><span class="mobile-menu__link-text">Поиск</span></a></div>
     </div>
     <script src="./js/jquery-2.2.1.min.js"></script>
     <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>

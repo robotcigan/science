@@ -11,7 +11,8 @@ block content
             a.link.link--active(href="") Активные
             a.link(href="") Готовые
           .buttons
-            a(href="#new-article").btn.btn--small.modal-open Написать статью
+            a(href="#new-article").btn.btn--micro.modal-open Написать 
+              span статью
         - for (var i = 0; i < 9; i++)
           .post.post--small.block
             include post-top.pug
@@ -48,16 +49,16 @@ block content
                     a(href="").user__name Ренат
 
         .block
-          a(href="#collegs").block__label.modal-open Группы 
+          a(href="#collegs").block__label.modal-open Сообщества 
             span 12
           .block__container
-            .groups
-              - for (var i = 0; i < 8; i++)
-                .group.group--big.group--vertical
-                  .ava
-                    img(src="./img/popular.jpg", alt="")
-                  .group__container
-                    a(href="").group__name Ренат
+            - for (var i = 0; i < 3; i++)
+              .user
+                .ava
+                  img(src="./img/popular.jpg", alt="")
+                .user__container
+                  a(href="").user__name Современная медицина
+                  .user__info 1 223 участникат
 
 
 
@@ -72,54 +73,16 @@ block content
             .user__container
               a(href="").user__name Ренат
 
-  #new-article.modal
-    .modal__title Написать статью
+  #post-share.modal.modal--small
+    .modal__title Поделиться записью
     .modal__container
-      form
-        .form-control
-          input(type="text")
-          label Название статьи
-        .thumbnail
-          .thumbnail__icon
-            img.svg(src="./img/thumbnail.svg", alt="")
-          .thumbnail__text Выберите изображение для обложки статьи
-        .form-control
-          select(multiple="multiple").custom-select.custom-select--multi
-            option Медицина
-            option Современная медицина
-            option Альтернативная медицина
-          label Научная область
-        .form-control
-          input(type="text")
-          label Научный руководитель
-        .form-control
-          input(type="text")
-          label ВУЗ
-        .tabs
-          .tabs__header
-            .tabs__link.tabs__link--active
-              .tabs__icon
-                img.svg(src="./img/check.svg")
-              span Сбор данных
-            .tabs__link
-              .tabs__icon
-                img.svg(src="./img/check.svg")
-              span Статическая информация
-            .tabs__link
-              .tabs__icon.tabs__icon--red
-                img.svg(src="./img/cross.svg")
-              span Выводы
-          .tabs__content.tabs__content--active
-            .form-control
-              textarea
-              label Текст
-          .tabs__content
-            .form-control
-              textarea
-              label Текст
-          .tabs__content
-            .form-control
-              textarea
-              label Текст
-        .btn Опубликовать
+      - for (var i = 0; i < 12; i++)
+        .user
+          .ava
+            img(src="./img/user.jpg", alt="")
+          .user__container
+            a(href="").user__name Смирнова Маргарита
+            .user__info Студент, 24 года
+
+  include new-article.pug
 

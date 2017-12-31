@@ -43,9 +43,13 @@ html(lang="ru")
                     .user__container
                       a(href="").user__name Ренат
                       .user__info Студент, 20 лет
+                  //- .dropdown__close ×
                 .dropdown__middle
-                  a(href="").dropdown__link Профиль
-                  a(href="").dropdown__link О проекте
+                  a(href="./profile.html").dropdown__link Профиль
+                  a(href="./articles.html").dropdown__link Мои статьи
+                  a(href="./groups.html").dropdown__link Мои сообщества
+                  a(href="./friends.html").dropdown__link Коллеги
+                  a(href="./about.html").dropdown__link О проекте
                   //- a(href="").btn Написать статью
                 .dropdown__footer
                   .logout
@@ -67,6 +71,27 @@ html(lang="ru")
       footer.main-footer
         .grid.grid--container
           p footer
+
+
+      .mobile-menu
+          a(href="./magazine.html").mobile-menu__link.mobile-menu__link--active
+            img.svg(src="./img/magazines.svg", alt="")
+            span.mobile-menu__link-text Журнал
+          //- a(href="").mobile-menu__link.mobile-menu__link--active
+          //-   img.svg(src="./img/home.svg", alt="")
+          //-   span.mobile-menu__link-text Профиль
+          a(href="./groups.html").mobile-menu__link
+            img.svg(src="./img/groups.svg", alt="")
+            span.mobile-menu__link-text Сообщества
+          a(href="./friends.html").mobile-menu__link
+            img.svg(src="./img/colleague.svg", alt="")
+            span.mobile-menu__link-text Коллеги
+          a(href="./messages.html").mobile-menu__link
+            img.svg(src="./img/messages.svg", alt="")
+            span.mobile-menu__link-text Сообщения
+          a(href="./search.html").mobile-menu__link
+            img.svg(src="./img/search.svg", alt="")
+            span.mobile-menu__link-text Поиск
 
 
 

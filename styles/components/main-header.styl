@@ -11,7 +11,7 @@
   // padding 1.8rem 0
   position fixed
   top 0
-  transition all .3s ease
+  transition .3s ease .1s
   width 100%
   z-index 20
   &__container
@@ -37,6 +37,12 @@
         transform none
   &--scroll
     box-shadow 0 8px 16px -3px rgba($gray, .15)
+  // &--visible
+  //   // position fixed
+  //   transform none
+  // &--hidden
+  //   // position absolute
+  //   transform translateY(-100%)
 
 .search
   background-color $light-gray
@@ -75,7 +81,7 @@
       position relative
       &:after
         background-color $primary
-        bottom -2.4rem
+        bottom -2.5rem
         content ''
         height 2px
         left -20%
@@ -156,3 +162,4 @@ $bar-spacing = .8rem
   .main-header
     &__user
       padding 1.6rem 0
+    

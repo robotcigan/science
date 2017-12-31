@@ -12,6 +12,8 @@
       padding 2.4rem
       &__container
         max-width 80%
+  .write
+    margin-bottom 0
 
 .message
   display flex
@@ -30,3 +32,16 @@
       color $primary
   .date
     font-size 1.2rem
+
+@media(max-width 767px)
+  .message
+    &__container
+      padding-left .8rem
+    &__top
+      justify-content space-between
+      padding-top 1.6rem
+    .date
+      margin-right 0
+    &__text
+      margin-left -5.6rem
+      margin-top 2.4rem

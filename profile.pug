@@ -4,18 +4,24 @@ block content
 
   .profile
     .grid.grid--container
-      .profile__photo
-        .photo(style="background-image: url(./img/user.png)")
-        .btn Изменить фотографию
-      .profile__container
-        .profile__name Гарипов Ренат Русланович
-        .profile__study Башкирский государственный медицинский университет (БГМУ), 2019
-        .profile__who Студент, 20 лет
-        .profile__tags Медицина, Альтернативная медицина, Современная медицина, Лечение рака
+      .profile__flex
+        .profile__photo
+          .photo(style="background-image: url(./img/user.png)")
+          a(href="#photo-edit").btn.btn--full-size.modal-open Изменить фотографию
+        .profile__container
+          .profile__name Гарипов Ренат Русланович
+          .profile__study Башкирский государственный медицинский университет (БГМУ), 2019
+          .profile__who Студент, 20 лет
+          .profile__tags Медицина, Альтернативная медицина, Современная медицина, Лечение рак, Альтернативная медицина
+          a(href="#profile-edit").btn.btn--small.btn--secondary.modal-open Редактировать
+          a(href="#new-article").btn.btn--small.modal-open Написать статью
+
+    .profile__bottom
   
   .grid.grid--container
     .row
       .col.col--lg-8
+        include write.pug
         - for (var i = 0; i < 3; i++)
           .post.post--small.block
             include post-top.pug
@@ -35,6 +41,81 @@ block content
 
 
       .col.col--lg-4
-        p right block
+        .block
+          .block__label Вас пригласили в сообщество
+          .block__container
+            .user
+              .ava
+                img(src="./img/popular.jpg", alt="")
+              .user__container
+                a(href="").user__name Современная медицина
+                .user__info 1 223 участника
+        .block
+          a(href="#collegs").block__label.modal-open Коллеги 
+            span 12
+          .block__container
+            .users
+              - for (var i = 0; i < 6; i++)
+                .user.user--big.user--vertical
+                  .ava
+                    img(src="./img/user.png", alt="")
+                  .user__container
+                    a(href="").user__name Ренат
+        .block
+          a(href="#collegs").block__label.modal-open Сообщества 
+            span 12
+          .block__container
+            - for (var i = 0; i < 3; i++)
+              .user
+                .ava
+                  img(src="./img/popular.jpg", alt="")
+                .user__container
+                  a(href="").user__name Современная медицина
+                  .user__info 1 223 участника
 
 
+  include new-article.pug
+
+  #profile-edit.modal
+    .modal__title Редактировать профиль
+    .modal__container
+      form
+        .form-control
+          input(type="text")
+          label Фамилия
+        .form-control
+          input(type="text")
+          label Имя
+        .form-control
+          input(type="text")
+          label Отчество
+        .form-control
+          input(type="text")
+          label Дата рождения
+        .form-control
+          input(type="text")
+          label ВУЗ
+        .form-control
+          select(multiple="multiple").custom-select.custom-select--multi
+            option Медицина
+            option Современная медицина
+            option Альтернативная медицина
+          label Научная область
+        .form-control
+          input(type="text")
+          label Год выпуска
+        .form-control
+          input(type="text")
+          label Место работы
+        .btn Сохранить
+
+
+  #photo-edit.modal
+    .modal__title Редактировать фотографию
+    .modal__container
+      form
+        .thumbnail
+          .thumbnail__icon
+            img.svg(src="./img/thumbnail.svg", alt="")
+          .thumbnail__text Выберите изображение
+        .btn Сохранить

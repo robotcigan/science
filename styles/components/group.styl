@@ -1,56 +1,21 @@
 .group
-  align-items center
-  display flex
-  margin-right 2.4rem
-  .ava
-    margin-right 1rem
-  &__name
-    color $primary
-    flex-shrink 0
-    font-size 1.6rem
-  &__info
-    color $gray
-    font-size 1.4rem
-    flex-shrink 0
-  &__name + .group__info
-    margin-top .8rem
-  &--small
-    .ava
-      circle(4rem)
-    &__name
-      font-size 1.4rem
-  &--big
-    .ava
-      circle(6.4rem)
-    &__name
-      font-size 1.4rem
-  &--huge
-    .ava
-      circle(8.8rem)
-    &__name
-      font-size 1.6rem
-  & + .group
-    margin-top 2.4rem
-  
-  &--vertical
-    display inline-flex
-    flex-direction column
-    justify-content center
-    // margin-right 0
-    margin-bottom 1.6rem
-    margin-right 1.6rem
-    .ava
-      margin-bottom .8rem
-      margin-right 0
-    & + .group
-      margin-top 0
-  // &--vertical
-  //   &:nth-of-type(4n)
-  //     margin-bottom 1.6rem
-  //   &:last-child
-  //     margin-bottom 0
-  //   &:not(:nth-of-type(4n))
-  //     margin-right 2rem
+  margin-bottom 3.2rem
+  &__wallpaper
+    background-position center
+    background-repeat no-repeat
+    background-size cover
+    height 32rem
+    width 100%
+  &__bottom
+    align-items center
+    background-color #fff
+    display flex
+    justify-content space-between
+    padding 1.6rem 2.4rem
 
-.groups
-  margin-right -1.6rem
+@media(max-width 767px)
+  .group
+    &__wallpaper
+      height 20rem
+    &__bottom
+      padding 1.6rem

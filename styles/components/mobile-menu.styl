@@ -1,0 +1,37 @@
+.mobile-menu
+  background-color #fff
+  border-top $border
+  bottom 0
+  // display flex
+  display none
+  justify-content space-between
+  left 0
+  padding 1.2rem 1.6rem
+  position fixed
+  width 100%
+  .svg
+    circle(2.4rem)
+    margin-bottom .2rem
+    path,
+    polygon
+      fill $icon-color
+  &__link-text
+    color $gray
+    display block
+    font-size 1rem
+    font-weight 500
+  &__link
+    text-align center
+    &--active
+      .svg
+        path,
+        polygon
+          fill $primary
+      .mobile-menu
+        &__link-text
+          color $primary
+
+
+@media(max-width 1200px)
+  .mobile-menu
+    display flex

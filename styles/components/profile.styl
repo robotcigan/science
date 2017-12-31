@@ -1,9 +1,50 @@
 .profile
   background-color $primary
+  color #fff
   margin-top -3.2rem
-  padding 3.2rem 0
-  .photo
-    background-size cover
-    border 3px solid #fff
-    border-radius $radius
-    circle(22rem)
+  padding-top 3.2rem
+  &__flex
+    display flex
+  &__container
+    padding-top 1.6rem
+  &__name
+    font-size 2.4rem
+    font-weight 500
+    margin-bottom 1.4rem
+  &__study
+    font-size 1.4rem
+    font-weight 300
+    margin-bottom 1rem
+  &__who
+    font-size 1.4rem
+    font-weight 300
+    opacity .7
+    margin-bottom 1rem
+  &__tags
+    font-size 1.4rem
+    font-weight 400
+    line-height 1.4
+    margin-bottom 3.2rem
+    max-width 48rem
+  &__photo
+    .photo
+      background-size cover
+      border 3px solid #fff
+      border-radius $radius
+      circle(22rem)
+      margin-right 3.2rem
+    .btn
+      background-color rgba($main, .2)
+      max-width 21.4rem
+      padding 1.7rem 0
+      transform translate(3px, -5.1rem)
+  &__bottom
+    background-color #fff
+    height 8rem
+    margin-bottom 2.4rem
+    margin-top -11.2rem
+
+@media(max-width 768px)
+  .profile
+    &__flex
+      display block

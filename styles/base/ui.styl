@@ -18,6 +18,10 @@
   &:hover
     background-color $primary - 15%
   &--small
+    font-size 1.4rem
+    font-weight 500
+    padding 1.4rem 1.6rem
+  &--micro
     font-size 1.3rem
     font-weight 400
     padding 1rem 1.2rem
@@ -25,6 +29,12 @@
     padding 2.2rem 3rem
     text-align center
     width 100%
+  &--secondary
+    background-color #eaeaea
+    color $main
+    &:hover
+      background-color #eaeaea - 10%
+      color $main
   &--green
     background-color $green
     &:hover
@@ -277,29 +287,16 @@
     &--active
       display block
 
-.noUi
-  &-value-large
-    &:nth-child(2)
-      margin-left 2rem
-    &:last-child
-      margin-left -2.5rem
 
-#initial-pay
-  .noUi
-    &-value-large
-      &:nth-child(2),
-      &:last-child
-        &:after
-          content ' млн'
-
-#credit-term
-  .noUi
-    &-value-large
-      &:nth-child(2)
-        &:after
-          content ' год'
-      &:last-child
-        &:after
-          content ' лет'
-
-
+@media(max-width 767px)
+  .tabs
+    &__header
+      margin 1.6rem -1.6rem
+      padding 0
+    &__link
+      font-size 1.2rem
+      padding 1.6rem .8rem
+    &__icon
+      circle(.8rem)
+      margin-right .4rem
+      transform translateY(-2px)

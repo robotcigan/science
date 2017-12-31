@@ -1,8 +1,10 @@
 .write
   align-items center
+  background-color #fff
   border-top $border
   display flex
   justify-content space-between
+  margin-bottom 3.2rem
   padding 0 .8rem
   &__input
     border none
@@ -26,3 +28,11 @@
     &:hover
       path
         fill $primary - 15%
+
+@media(max-width 767px)
+  .write
+    &__input
+      padding 1.6rem
+      padding-left .8rem
+    &__right
+      margin-right 0

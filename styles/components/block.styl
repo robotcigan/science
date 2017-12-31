@@ -14,6 +14,8 @@
       margin-left .8rem
   &__container
     padding 2.4rem
+    & + .write
+      margin-bottom 0
   &__info
     display flex
     .item
@@ -23,9 +25,9 @@
         circle(1.6rem)
         margin-right .8rem
         path
-          fill $gray
+          fill rgba($primary, .25) - 40%
         .fa
-          color $gray
+          color rgba($primary, .25) - 40%
           display block
           margin-right .8rem
       &--active
@@ -36,6 +38,7 @@
           fill $primary
       & + .item
         margin-left 1.6rem
+
 
 .more
   background-color $light-gray

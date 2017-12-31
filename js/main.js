@@ -29,12 +29,27 @@ $(document).ready(function() {
   })
 
   // Закрепленная шапка
+  let scroll = 0;
   function mainHeaderScroll() {
     if( $(window).scrollTop() > 20 ) {
       $('.main-header').addClass('main-header--scroll');
     } else {
       $('.main-header').removeClass('main-header--scroll');
     }
+
+    // if( $(window).scrollTop() ) {
+    //   console.log('scroll', scroll, 'window-scroll', $(window).scrollTop())
+    //   if ( scroll < $(window).scrollTop() ) {
+    //     scroll = $(window).scrollTop();
+    //     $('.main-header').removeClass('main-header--visible');
+    //     $('.main-header').addClass('main-header--hidden');
+    //   } else {
+    //     scroll = 0;
+    //     $('.main-header').removeClass('main-header--hidden');
+    //     $('.main-header').addClass('main-header--visible');
+    //   }
+    // }
+    
   }
 
   $(window).scroll(function () {
