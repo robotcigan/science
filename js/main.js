@@ -1,5 +1,28 @@
 $(document).ready(function() {
 
+  let page = window.location.pathname;
+  let mobileMenuLink = $('.mobile-menu__link')
+  switch(page) {
+    case '/magazine.html':
+      mobileMenuLink.eq(0).addClass('mobile-menu__link--active');
+      break;
+    case '/groups.html':
+      mobileMenuLink.eq(1).addClass('mobile-menu__link--active');
+      break;
+    case '/friends.html':
+      mobileMenuLink.eq(2).addClass('mobile-menu__link--active');
+      break;
+    case '/messages.html':
+      mobileMenuLink.eq(3).addClass('mobile-menu__link--active');
+      break;
+    case '/search.html':
+      mobileMenuLink.eq(4).addClass('mobile-menu__link--active');
+      break;
+  }
+  // if ( window.location.pathname === "/magazine.html" ) {
+  //   $('.mobile-menu__link').eq(0).addClass('mobile-menu__link--active');
+  // }
+
   // Custom select
   $('.custom-select').select2({
     dropdownAutoWidth : true,
