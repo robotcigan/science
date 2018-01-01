@@ -1,0 +1,10 @@
+#post-share.modal.modal--small
+  .modal__title Поделиться записью
+  .modal__container
+    - for (var i = 0; i < 12; i++)
+      .user
+        .ava
+          img(src="./img/user.jpg", alt="")
+        .user__container
+          a(href="").user__name Смирнова Маргарита
+          .user__info Студент, 24 года
