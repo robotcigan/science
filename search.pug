@@ -1,0 +1,35 @@
+extends layout.pug
+
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--lg-8
+        .block
+          .special-links
+            p Результаты поиска
+          form.page-search
+            input.page-search__input(type="text" placeholder="Введите поисковую фразу")
+            button.page-search__btn
+              img.svg(src="./img/search.svg" alt="")
+          - for (var i = 0; i < 3; i++)
+            .post.post--small.block
+              include post-top.pug
+              .post__middle
+                a(href="").post__title Опыт лечения рака предстательной железы в Клинике Башкирского государственного медицинского университета
+                .tags
+                  .tag.tag--red Медицина
+                  .tag.tag--green Лечение рака
+                  .tag Современная медицина
+
+              include post-footer.pug
+
+
+      .col.col--lg-4
+        .block.switcher
+          a(href="").switcher__link.switcher__link--active Статьи
+          a(href="").switcher__link Люди
+          a(href="").switcher__link Сообщества
+          a(href="").switcher__link Мероприятия
+

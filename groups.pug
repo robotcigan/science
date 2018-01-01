@@ -1,0 +1,82 @@
+extends layout.pug
+
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--lg-8
+        .block
+          .special-links
+            p Вы состоите в 7 сообществах
+            .buttons
+              a(href="#new-group").btn.btn--micro.modal-open Создать 
+                span сообщество
+          .table-items
+            - for (var i = 0; i < 7; i++)
+              .item
+                .user
+                  .ava
+                    img(src="./img/popular.jpg", alt="")
+                  .user__container
+                    a(href="").user__name Современная медицина
+                    .user__info 1 123 участника
+                .item__controls
+                  .item__icon
+                    span
+                    span
+                    span
+                  .item__menu
+                    .item__link Отписаться
+
+
+      .col.col--lg-4
+        .block.switcher
+          a(href="").switcher__link.switcher__link--active Мои сообщества
+          a(href="").switcher__link Мероприятия
+          .divider
+          a(href="").switcher__link Популярные сообщества
+        .block
+          .block__label Вас пригласили в сообщество
+          .block__container
+            .user
+              .ava
+                img(src="./img/popular.jpg", alt="")
+              .user__container
+                a(href="").user__name Современная медицина
+                .user__info 1 223 участника
+        .block
+          a(href="#collegs").block__label.modal-open Коллеги 
+            span 12
+          .block__container
+            .users
+              - for (var i = 0; i < 6; i++)
+                .user.user--big.user--vertical
+                  .ava
+                    img(src="./img/user.png", alt="")
+                  .user__container
+                    a(href="").user__name Ренат
+  
+
+  #new-group.modal
+    .modal__title Создать сообщество
+    .modal__container
+      form
+        .form-control
+          input(type="text")
+          label Название сообщества
+        .thumbnail
+          .thumbnail__icon
+            img.svg(src="./img/thumbnail.svg", alt="")
+          .thumbnail__text Выберите изображение для обложки сообщества
+        //- .form-control
+        //-   select(multiple="multiple").custom-select.custom-select--multi
+        //-     option Медицина
+        //-     option Современная медицина
+        //-     option Альтернативная медицина
+        //-   label Научная область
+        .form-control
+          textarea
+          label Описание сообщества
+        .btn Создать
+

@@ -38,6 +38,19 @@
   & + .user
     margin-top 2.4rem
   
+  &--online
+    position relative
+    &:after
+      background-color $green
+      border 1.5px solid #fff
+      border-radius 50%
+      circle(8px)
+      content ''
+      display block
+      left 4
+      position absolute
+      top 0
+  
   &--vertical
     display inline-flex
     flex-direction column

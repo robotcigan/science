@@ -1,0 +1,26 @@
+.switcher
+  padding .8rem 0
+  &__link
+    color $primary
+    display block
+    padding 1.2rem 2.4rem
+    transition all .3s ease
+    &:hover
+      color $primary - 20%
+    &--active
+      background-color $special
+      color $main
+      font-weight 500
+      position relative
+      &:before
+        background-color $primary
+        content ''
+        height 100%
+        left 0
+        position absolute
+        top 0
+        width 2px
+  .divider
+    background-color $light-gray
+    height 1px
+    margin .8rem 2.4rem
