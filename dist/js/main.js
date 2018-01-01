@@ -6,18 +6,23 @@ $(document).ready(function () {
   var mobileMenuLink = $('.mobile-menu__link');
   switch (page) {
     case './magazine.html':
+    case './science/dist/magazine.html':
       mobileMenuLink.eq(0).addClass('mobile-menu__link--active');
       break;
     case './groups.html':
+    case './science/dist/groups.html':
       mobileMenuLink.eq(1).addClass('mobile-menu__link--active');
       break;
     case './friends.html':
+    case './science/dist/friends.html':
       mobileMenuLink.eq(2).addClass('mobile-menu__link--active');
       break;
     case './messages.html':
+    case './science/dist/messages.html':
       mobileMenuLink.eq(3).addClass('mobile-menu__link--active');
       break;
     case './search.html':
+    case './science/dist/search.html':
       mobileMenuLink.eq(4).addClass('mobile-menu__link--active');
       break;
   }
