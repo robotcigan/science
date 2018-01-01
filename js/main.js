@@ -3,19 +3,19 @@ $(document).ready(function() {
   let page = window.location.pathname;
   let mobileMenuLink = $('.mobile-menu__link')
   switch(page) {
-    case '/magazine.html':
+    case './magazine.html':
       mobileMenuLink.eq(0).addClass('mobile-menu__link--active');
       break;
-    case '/groups.html':
+    case './groups.html':
       mobileMenuLink.eq(1).addClass('mobile-menu__link--active');
       break;
-    case '/friends.html':
+    case './friends.html':
       mobileMenuLink.eq(2).addClass('mobile-menu__link--active');
       break;
-    case '/messages.html':
+    case './messages.html':
       mobileMenuLink.eq(3).addClass('mobile-menu__link--active');
       break;
-    case '/search.html':
+    case './search.html':
       mobileMenuLink.eq(4).addClass('mobile-menu__link--active');
       break;
   }
