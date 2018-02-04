@@ -1,0 +1,87 @@
+.reg
+  border $border
+  border-radius 6px
+  background-color #fff
+  overflow hidden
+  margin-bottom 4rem
+  display flex
+  &__left
+    width 50%
+  &__right
+    padding 4rem 8rem
+    width 50%
+  &__video
+    background-size cover
+    height 100%
+  &__title
+    font-size 2.4rem
+    margin-bottom 1.6rem
+  &__subtitle
+    font-size 1.3rem
+    margin-bottom 2rem
+  .form
+    margin-bottom 3.2rem
+  &__or
+    color #ccc
+    font-size 1.2rem
+    font-weight 600
+    margin-bottom 3.2rem
+    position relative
+    text-align center
+    text-transform uppercase
+    &:before
+      background-color $light-gray
+      content ''
+      height 1px
+      left 0
+      position absolute
+      top 4px
+      width 100%
+    span
+      background-color #fff
+      padding 0 2.4rem
+      position relative
+      z-index 1
+  &__enter-by
+    display flex
+    justify-content center
+    margin-bottom 3.2rem
+    .item
+      align-items center
+      border-radius 50%
+      circle(4rem)
+      color #fff
+      display flex
+      font-weight 300
+      justify-content center
+      &:not(:last-child)
+        margin-right 2rem
+      &--vk
+        background-color $vk
+        .fa
+          transform translate(-1px, -1px)
+      &--facebook
+        background-color $facebook
+      &--google
+        background-color $google-plus
+  &__enter
+    text-align center
+
+
+@media(max-width 1000px)
+  .reg
+    display block
+    &__left
+      height 30vh
+      min-height 20rem
+      width 100%
+    &__right
+      width 100%
+
+
+@media(max-width 767px)
+  .reg
+    &__left
+      display none
+    &__right
+      padding 2.4rem 1.6rem

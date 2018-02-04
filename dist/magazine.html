@@ -16,36 +16,58 @@
       <header class="main-header">
         <div class="grid grid--container">
           <div class="main-header__container">
-            <div class="mobile-toggle">
-              <div class="bar"></div>
-            </div><a class="logo" href="./pages.html">
-              <div class="logo__img"></div>
-              <div class="logo__name">SYNAPS</div></a>
-            <div class="nav"><a class="nav__link" href="./my-articles.html">Мои статьи</a><a class="nav__link" href="./groups.html">Мои сообщества</a><a class="nav__link" href="./friends.html">Коллеги</a><a class="nav__link nav__link--active" href="./magazine.html">Журнал</a><a class="nav__link" href="./messages.html">Сообщения</a></div>
+            <div class="main-header__left">
+              <div class="mobile-toggle">
+                <div class="bar"></div>
+              </div><a class="logo" href="./pages.html">
+                <div class="logo__img"></div></a>
+              <div class="nav"><a class="nav__link" href="./my-articles.html">Мои статьи</a><a class="nav__link" href="./groups.html">Мои сообщества</a><a class="nav__link" href="./friends.html">Коллеги</a><a class="nav__link nav__link--active" href="./magazine.html">Журнал</a><a class="nav__link" href="./messages.html">Сообщения</a></div>
+            </div>
             <form class="search">
               <input class="search__input" type="text" placeholder="Поиск">
               <button class="search__btn"><img class="svg" src="./img/search.svg" alt=""></button>
             </form>
-            <div class="main-header__user">
-              <div class="dropdown">
-                <div class="dropdown__top">
-                  <div class="user user--big">
-                    <div class="ava"><img src="./img/user.png" alt=""></div>
-                    <div class="user__container"><a class="user__name" href="">Ренат</a>
-                      <div class="user__info">Студент, 20 лет</div>
+            <div class="main-header__right">
+              <div class="main-header__user">
+                <div class="dropdown">
+                  <div class="dropdown__top">
+                    <div class="user user--big">
+                      <div class="ava"><img src="./img/user.png" alt=""></div>
+                      <div class="user__container"><a class="user__name" href="">Ренат</a>
+                        <div class="user__info">Студент, 20 лет</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown__middle"><a class="dropdown__link" href="./profile.html">Профиль</a><a class="dropdown__link" href="./my-articles.html">Мои статьи</a><a class="dropdown__link" href="./groups.html">Мои сообщества</a><a class="dropdown__link" href="./friends.html">Коллеги</a><a class="dropdown__link" href="./about.html">О проекте</a></div>
+                  <div class="dropdown__footer">
+                    <div class="logout">
+                      <div class="logout__icon"><img class="svg" src="./img/logout.svg"></div><a href="">Выйти</a>
                     </div>
                   </div>
                 </div>
-                <div class="dropdown__middle"><a class="dropdown__link" href="./profile.html">Профиль</a><a class="dropdown__link" href="./my-articles.html">Мои статьи</a><a class="dropdown__link" href="./groups.html">Мои сообщества</a><a class="dropdown__link" href="./friends.html">Коллеги</a><a class="dropdown__link" href="./about.html">О проекте</a></div>
-                <div class="dropdown__footer">
-                  <div class="logout">
-                    <div class="logout__icon"><img class="svg" src="./img/logout.svg"></div><a href="">Выйти</a>
-                  </div>
+                <div class="user user--small">
+                  <div class="user__container"><a class="user__name" href="">Ренат</a></div>
+                  <div class="ava"><img src="./img/user.png" alt=""></div>
                 </div>
               </div>
-              <div class="user user--small">
-                <div class="user__container"><a class="user__name" href="">Ренат</a></div>
-                <div class="ava"><img src="./img/user.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="main-header">
+        <div class="grid grid--container">
+          <div class="main-header__container">
+            <div class="main-header__left">
+              <div class="mobile-toggle">
+                <div class="bar"></div>
+              </div><a class="logo" href="./pages.html">
+                <div class="logo__img"></div></a>
+              <div class="nav"><a class="nav__link" href="./my-articles.html">Популярные статьи</a><a class="nav__link" href="./groups.html">Новое
+                  <div class="nav__badge">2</div></a></div>
+            </div>
+            <div class="main-header__right">
+              <div class="main-header__about">
+                <div class="icon"><img class="svg" src="./img/about.svg" alt=""></div>О проекте
               </div>
             </div>
           </div>
@@ -239,6 +261,22 @@
                   </div><a class="btn btn--green" href="">Подробнее</a>
                 </div>
               </div>
+              <div class="block"><a class="block__label modal-open" href="#collegs">Популярные статьи</a>
+                <div class="block__container">
+                  <div class="user">
+                    <div class="ava"><img src="./img/popular.jpg" alt=""></div>
+                    <div class="user__container"><a class="user__name" href="">Очень длинное название статьи на 2 строки</a></div>
+                  </div>
+                  <div class="user">
+                    <div class="ava"><img src="./img/popular.jpg" alt=""></div>
+                    <div class="user__container"><a class="user__name" href="">Очень длинное название статьи на 2 строки</a></div>
+                  </div>
+                  <div class="user">
+                    <div class="ava"><img src="./img/popular.jpg" alt=""></div>
+                    <div class="user__container"><a class="user__name" href="">Очень длинное название статьи на 2 строки</a></div>
+                  </div>
+                </div>
+              </div>
               <div class="block">
                 <div class="block__label">Теги</div>
                 <div class="block__container">
@@ -354,11 +392,6 @@
           </div>
         </div>
       </div>
-      <footer class="main-footer">
-        <div class="grid grid--container">
-          <p>footer</p>
-        </div>
-      </footer>
       <div class="mobile-menu"><a class="mobile-menu__link" href="./magazine.html"><img class="svg" src="./img/magazines.svg" alt=""><span class="mobile-menu__link-text">Журнал</span></a><a class="mobile-menu__link" href="./groups.html"><img class="svg" src="./img/groups.svg" alt=""><span class="mobile-menu__link-text">Сообщества</span></a><a class="mobile-menu__link" href="./friends.html"><img class="svg" src="./img/colleague.svg" alt=""><span class="mobile-menu__link-text">Коллеги</span></a><a class="mobile-menu__link" href="./messages.html"><img class="svg" src="./img/messages.svg" alt=""><span class="mobile-menu__link-text">Сообщения</span></a><a class="mobile-menu__link" href="./search.html"><img class="svg" src="./img/search.svg" alt=""><span class="mobile-menu__link-text">Поиск</span></a></div>
     </div>
     <script src="./js/jquery-2.2.1.min.js"></script>

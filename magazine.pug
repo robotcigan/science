@@ -33,16 +33,17 @@ block content
             a(href="").popular__title Будущее кибернетических протезов или как удешевить производство в 2 раза?
             include postinfo.pug
             a(href="").btn.btn--green Подробнее
-        //- .block
-        //-   .block__label Коллеги
-        //-   .block__container
-        //-     - for (var i = 0; i < 3; i++)
-        //-       .user
-        //-         .ava
-        //-           img(src="./img/user.png", alt="")
-        //-         .user__container
-        //-           a(href="").user__name Гарипов Ренат
-        //-           .user__info Студент, 20 лет
+
+
+        .block
+          a(href="#collegs").block__label.modal-open Популярные статьи
+          .block__container
+            - for (var i = 0; i < 3; i++)
+              .user
+                .ava
+                  img(src="./img/popular.jpg", alt="")
+                .user__container
+                  a(href="").user__name Очень длинное название статьи на 2 строки
 
         .block
           .block__label Теги

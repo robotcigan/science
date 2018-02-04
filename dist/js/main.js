@@ -32,10 +32,17 @@ $(document).ready(function () {
 
   // Custom select
   $('.custom-select').select2({
+    minimumResultsForSearch: Infinity,
     dropdownAutoWidth: true,
     maximumSelectionLength: 5,
     width: '100%'
   });
+
+  // $('.custom-select').select2({
+  //   dropdownAutoWidth : true,
+  //   maximumSelectionLength: 5,
+  //   width: '100%'
+  // });
 
   // Поля
   $('.form-control input').on('keyup change', function () {

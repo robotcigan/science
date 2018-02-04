@@ -16,36 +16,58 @@
       <header class="main-header">
         <div class="grid grid--container">
           <div class="main-header__container">
-            <div class="mobile-toggle">
-              <div class="bar"></div>
-            </div><a class="logo" href="./pages.html">
-              <div class="logo__img"></div>
-              <div class="logo__name">SYNAPS</div></a>
-            <div class="nav"><a class="nav__link" href="./my-articles.html">Мои статьи</a><a class="nav__link" href="./groups.html">Мои сообщества</a><a class="nav__link" href="./friends.html">Коллеги</a><a class="nav__link nav__link--active" href="./magazine.html">Журнал</a><a class="nav__link" href="./messages.html">Сообщения</a></div>
+            <div class="main-header__left">
+              <div class="mobile-toggle">
+                <div class="bar"></div>
+              </div><a class="logo" href="./pages.html">
+                <div class="logo__img"></div></a>
+              <div class="nav"><a class="nav__link" href="./my-articles.html">Мои статьи</a><a class="nav__link" href="./groups.html">Мои сообщества</a><a class="nav__link" href="./friends.html">Коллеги</a><a class="nav__link nav__link--active" href="./magazine.html">Журнал</a><a class="nav__link" href="./messages.html">Сообщения</a></div>
+            </div>
             <form class="search">
               <input class="search__input" type="text" placeholder="Поиск">
               <button class="search__btn"><img class="svg" src="./img/search.svg" alt=""></button>
             </form>
-            <div class="main-header__user">
-              <div class="dropdown">
-                <div class="dropdown__top">
-                  <div class="user user--big">
-                    <div class="ava"><img src="./img/user.png" alt=""></div>
-                    <div class="user__container"><a class="user__name" href="">Ренат</a>
-                      <div class="user__info">Студент, 20 лет</div>
+            <div class="main-header__right">
+              <div class="main-header__user">
+                <div class="dropdown">
+                  <div class="dropdown__top">
+                    <div class="user user--big">
+                      <div class="ava"><img src="./img/user.png" alt=""></div>
+                      <div class="user__container"><a class="user__name" href="">Ренат</a>
+                        <div class="user__info">Студент, 20 лет</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown__middle"><a class="dropdown__link" href="./profile.html">Профиль</a><a class="dropdown__link" href="./my-articles.html">Мои статьи</a><a class="dropdown__link" href="./groups.html">Мои сообщества</a><a class="dropdown__link" href="./friends.html">Коллеги</a><a class="dropdown__link" href="./about.html">О проекте</a></div>
+                  <div class="dropdown__footer">
+                    <div class="logout">
+                      <div class="logout__icon"><img class="svg" src="./img/logout.svg"></div><a href="">Выйти</a>
                     </div>
                   </div>
                 </div>
-                <div class="dropdown__middle"><a class="dropdown__link" href="./profile.html">Профиль</a><a class="dropdown__link" href="./my-articles.html">Мои статьи</a><a class="dropdown__link" href="./groups.html">Мои сообщества</a><a class="dropdown__link" href="./friends.html">Коллеги</a><a class="dropdown__link" href="./about.html">О проекте</a></div>
-                <div class="dropdown__footer">
-                  <div class="logout">
-                    <div class="logout__icon"><img class="svg" src="./img/logout.svg"></div><a href="">Выйти</a>
-                  </div>
+                <div class="user user--small">
+                  <div class="user__container"><a class="user__name" href="">Ренат</a></div>
+                  <div class="ava"><img src="./img/user.png" alt=""></div>
                 </div>
               </div>
-              <div class="user user--small">
-                <div class="user__container"><a class="user__name" href="">Ренат</a></div>
-                <div class="ava"><img src="./img/user.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="main-header">
+        <div class="grid grid--container">
+          <div class="main-header__container">
+            <div class="main-header__left">
+              <div class="mobile-toggle">
+                <div class="bar"></div>
+              </div><a class="logo" href="./pages.html">
+                <div class="logo__img"></div></a>
+              <div class="nav"><a class="nav__link" href="./my-articles.html">Популярные статьи</a><a class="nav__link" href="./groups.html">Новое
+                  <div class="nav__badge">2</div></a></div>
+            </div>
+            <div class="main-header__right">
+              <div class="main-header__about">
+                <div class="icon"><img class="svg" src="./img/about.svg" alt=""></div>О проекте
               </div>
             </div>
           </div>
@@ -62,7 +84,11 @@
                 <div class="profile__name">Гарипов Ренат Русланович</div>
                 <div class="profile__study">Башкирский государственный медицинский университет (БГМУ), 2019</div>
                 <div class="profile__who">Студент, 20 лет</div>
-                <div class="profile__tags">Медицина, Альтернативная медицина, Современная медицина, Лечение рак, Альтернативная медицина</div><a class="btn btn--small btn--secondary modal-open" href="#profile-edit">Редактировать</a><a class="btn btn--small modal-open" href="#new-article">Написать статью</a>
+                <div class="tags">
+                  <div class="tag tag--red">Медицина</div>
+                  <div class="tag tag--green">Лечение рака</div>
+                  <div class="tag">Современная медицина</div>
+                </div><a class="btn btn--small btn--secondary modal-open" href="#profile-edit">Редактировать</a><a class="btn btn--small modal-open" href="#new-article">Написать статью</a>
               </div>
             </div>
           </div>
@@ -78,6 +104,56 @@
                   <button class="write__send"><img class="svg" src="./img/send.svg" alt=""></button>
                 </div>
               </form>
+              <div class="post post--small block">
+                <div class="post__top">
+                  <div class="post__top-left">
+                    <div class="user user--small">
+                      <div class="ava"><img src="./img/user.png" alt=""></div>
+                      <div class="user__container"><a class="user__name" href="">Гарипов Ренат</a></div>
+                    </div>
+                    <div class="date">30 октября</div>
+                  </div>
+                  <div class="post__top-right">
+                    <div class="rating">
+                      <div class="stars">
+                        <div class="star star--active"><i class="fa fa-star"></i></div>
+                        <div class="star star--active"><i class="fa fa-star"></i></div>
+                        <div class="star star--active"><i class="fa fa-star"></i></div>
+                        <div class="star star--active"><i class="fa fa-star"></i></div>
+                        <div class="star"><i class="fa fa-star"></i></div>
+                      </div>
+                      <div class="rating__number">4.6</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post__middle">
+                  <p class="post__anons">Бессознательное иллюстрирует латентный субъект. Как было показано выше, код гомогенно интегрирует филосовский тест. Кризис отчуждает индивидуальный психоанализ. Импульс сложен. Эриксоновский гипноз пространственно притягивает социометрический интеллект. Стимул вызывает страх.</p>
+                </div>
+                <div class="share">
+                  <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter" data-counter=""></div>
+                </div>
+                <div class="post__footer">
+                  <div class="post__footer-left">
+                    <div class="block__info">
+                      <div class="item">
+                        <div class="item__icon"><img class="svg" src="./img/view.svg" alt=""></div>
+                        <div class="block__number">256</div>
+                      </div><a class="item" href="">
+                        <div class="item__icon"><img class="svg" src="./img/comment.svg" alt=""></div>
+                        <div class="block__number">12</div></a>
+                      <div class="item item--active">
+                        <div class="item__icon"><i class="fa fa-heart"></i></div>
+                        <div class="post__number">58</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post__footer-right">
+                    <div class="block__info"><a class="item item--share modal-open" href="#post-share">
+                        <div class="item__icon"><img class="svg" src="./img/share.svg" alt=""></div>
+                        <div class="post__number">57</div></a></div>
+                  </div>
+                </div>
+              </div>
               <div class="post post--small block">
                 <div class="post__top">
                   <div class="post__top-left">
@@ -508,11 +584,6 @@
           </div>
         </div>
       </div>
-      <footer class="main-footer">
-        <div class="grid grid--container">
-          <p>footer</p>
-        </div>
-      </footer>
       <div class="mobile-menu"><a class="mobile-menu__link" href="./magazine.html"><img class="svg" src="./img/magazines.svg" alt=""><span class="mobile-menu__link-text">Журнал</span></a><a class="mobile-menu__link" href="./groups.html"><img class="svg" src="./img/groups.svg" alt=""><span class="mobile-menu__link-text">Сообщества</span></a><a class="mobile-menu__link" href="./friends.html"><img class="svg" src="./img/colleague.svg" alt=""><span class="mobile-menu__link-text">Коллеги</span></a><a class="mobile-menu__link" href="./messages.html"><img class="svg" src="./img/messages.svg" alt=""><span class="mobile-menu__link-text">Сообщения</span></a><a class="mobile-menu__link" href="./search.html"><img class="svg" src="./img/search.svg" alt=""><span class="mobile-menu__link-text">Поиск</span></a></div>
     </div>
     <script src="./js/jquery-2.2.1.min.js"></script>

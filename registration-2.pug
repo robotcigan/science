@@ -1,0 +1,36 @@
+extends layout.pug
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--xl-10.col--xl-offset-1
+        .reg
+          .reg__left
+            .reg__video(style="background-image: url(./img/registration.jpg)")
+          .reg__right
+            .reg__title Последний шаг
+            form.form
+              .form-control
+                input(type="text")
+                label Дата рождения
+              .form-control
+                input(type="text").phone-mask
+                label Телефон
+              .form-control
+                input(type="text")
+                label Должность
+              .form-control
+                select.custom-select
+                  option Исследователь
+                  option Исследователь
+                  option Исследователь
+                label Научная область
+              .btn.btn--small.btn--full-size Подтвердить
+           
+
+
+
+
+
+

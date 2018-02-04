@@ -3,57 +3,9 @@
     border-bottom $border
     padding 2.4rem 3.2rem
     position relative
-    &__controls
-      cursor pointer
-      padding 2.4rem
-      position absolute
-      right 0
-      top 0
-      &:hover
-        .item
-          &__menu
-            opacity 1
-            visibility visible
-            transform none
-    &__icon
-      span
-        background-color rgba($primary, .5) - 40%
-        border-radius 50%
-        circle(4px)
-        display inline-block
-        &:not(:last-child)
-          margin-right .2rem
-    &__menu
-      background-color #fff
-      border $border
-      border-radius $radius
-      box-shadow $shadow
-      opacity 0
-      visibility hidden
-      position absolute
-      transform translateY(1.6rem)
-      transition all .2s ease
-      right 0
-      top 4.8rem
-      z-index 5
-      &:hover
-        opacity 1
-        visibility visible
-        transform none
-    &__link
-      font-size 1.3rem
-      padding 1.2rem 1.6rem
-      transition all .2s ease
-      white-space nowrap
-      &:hover
-        color $primary
-      & + .item__link
-        border-top $border
 
 
 @media(max-width 767px)
   .table-items
     .item
       padding 1.6rem
-      &__controls
-        top -.6rem

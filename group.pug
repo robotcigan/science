@@ -8,13 +8,27 @@ block content
     .group
       .group__wallpaper(style="background-image: url(./img/group.jpg)")
       .group__bottom
-        .user
-          .ava
-            img(src="./img/popular.jpg", alt="")
-          .user__container
-            a(href="").user__name Современная медицина
-            .user__info 1 234 участника
-        .btn.btn--micro Подписаться
+        .group__left
+          .user
+            .ava
+              img(src="./img/popular.jpg", alt="")
+            .user__container
+              a(href="").user__name Современная медицина
+              .user__info 1 234 участника
+        .group__right
+          .btn.btn--micro Подписаться
+          .controls
+            .controls__icon
+              span
+              span
+              span
+            .controls__menu
+              .controls__link Отправить деньги
+              .controls__link Редактировать
+              .controls__link Рассказать друзьям
+
+
+
 
     .row
       .col.col--lg-8

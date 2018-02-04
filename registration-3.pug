@@ -1,0 +1,35 @@
+extends layout.pug
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--xl-10.col--xl-offset-1
+        .reg
+          .reg__left
+            .reg__video(style="background-image: url(./img/registration.jpg)")
+          .reg__right
+            .reg__title Войти
+            form.form
+              .form-control
+                input(type="email")
+                label Электронная почта
+              .form-control
+                input(type="password")
+                label Пароль
+              .btn.btn--small.btn--full-size Войти
+            .reg__or
+              span или войти через
+            .reg__enter-by
+              a(href="").item.item--vk
+                .fa.fa-vk
+              a(href="").item.item--facebook
+                .fa.fa-facebook
+              a(href="").item.item--google
+                .fa.fa-google
+
+
+
+
+
+

@@ -19,58 +19,79 @@ html(lang="ru")
       header.main-header
         .grid.grid--container
           .main-header__container
-            .mobile-toggle
-              .bar
-            a(href="./pages.html").logo
-              .logo__img
-              .logo__name SYNAPS
-            .nav
-              a(href="./my-articles.html").nav__link Мои статьи
-              a(href="./groups.html").nav__link Мои сообщества
-              a(href="./friends.html").nav__link Коллеги
-              a(href="./magazine.html").nav__link.nav__link--active Журнал
-              a(href="./messages.html").nav__link Сообщения
+            .main-header__left
+              .mobile-toggle
+                .bar
+              a(href="./pages.html").logo
+                .logo__img
+                //- .logo__name SYNAPS
+              .nav
+                a(href="./my-articles.html").nav__link Мои статьи
+                a(href="./groups.html").nav__link Мои сообщества
+                a(href="./friends.html").nav__link Коллеги
+                a(href="./magazine.html").nav__link.nav__link--active Журнал
+                a(href="./messages.html").nav__link Сообщения
             form.search
               input.search__input(type="text" placeholder="Поиск")
               button.search__btn
                 img.svg(src="./img/search.svg" alt="")
-            .main-header__user
-              .dropdown
-                .dropdown__top
-                  .user.user--big
-                    .ava
-                      img(src="./img/user.png", alt="")
-                    .user__container
-                      a(href="").user__name Ренат
-                      .user__info Студент, 20 лет
-                  //- .dropdown__close ×
-                .dropdown__middle
-                  a(href="./profile.html").dropdown__link Профиль
-                  a(href="./my-articles.html").dropdown__link Мои статьи
-                  a(href="./groups.html").dropdown__link Мои сообщества
-                  a(href="./friends.html").dropdown__link Коллеги
-                  a(href="./about.html").dropdown__link О проекте
-                  //- a(href="").btn Написать статью
-                .dropdown__footer
-                  .logout
-                    .logout__icon
-                      img.svg(src="./img/logout.svg")
-                    a(href="") Выйти
-              .user.user--small
-                .user__container
-                  a(href="").user__name Ренат
-                .ava
-                  img(src="./img/user.png", alt="")
+            .main-header__right
+              .main-header__user
+                .dropdown
+                  .dropdown__top
+                    .user.user--big
+                      .ava
+                        img(src="./img/user.png", alt="")
+                      .user__container
+                        a(href="").user__name Ренат
+                        .user__info Студент, 20 лет
+                    //- .dropdown__close ×
+                  .dropdown__middle
+                    a(href="./profile.html").dropdown__link Профиль
+                    a(href="./my-articles.html").dropdown__link Мои статьи
+                    a(href="./groups.html").dropdown__link Мои сообщества
+                    a(href="./friends.html").dropdown__link Коллеги
+                    a(href="./about.html").dropdown__link О проекте
+                    //- a(href="").btn Написать статью
+                  .dropdown__footer
+                    .logout
+                      .logout__icon
+                        img.svg(src="./img/logout.svg")
+                      a(href="") Выйти
+                .user.user--small
+                  .user__container
+                    a(href="").user__name Ренат
+                  .ava
+                    img(src="./img/user.png", alt="")
 
+
+      header.main-header
+        .grid.grid--container
+          .main-header__container
+            .main-header__left
+              .mobile-toggle
+                .bar
+              a(href="./pages.html").logo
+                .logo__img
+              .nav
+                a(href="./my-articles.html").nav__link Популярные статьи
+                a(href="./groups.html").nav__link Новое
+                  .nav__badge 2
+
+            .main-header__right
+              .main-header__about
+                .icon
+                  img.svg(src="./img/about.svg", alt="")
+                | О проекте
 
       
       .main
 
         block content
 
-      footer.main-footer
-        .grid.grid--container
-          p footer
+      //- footer.main-footer
+      //-   .grid.grid--container
+      //-     p footer
 
 
       .mobile-menu

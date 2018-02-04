@@ -26,7 +26,6 @@
     font-weight 400
     padding 1rem 1.2rem
   &--full-size
-    padding 2.2rem 3rem
     text-align center
     width 100%
   &--secondary
@@ -287,6 +286,16 @@
     &--active
       display block
 
+
+.regular-link
+  border-bottom 1px solid rgba($primary, .2)
+  color $primary
+  display inline
+  text-decoration none
+  transition border-color .4s, color .4s
+  &:hover
+    color $primary - 20%
+    border-color rgba($primary, .4)
 
 @media(max-width 767px)
   .tabs

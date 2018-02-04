@@ -12,7 +12,11 @@ block content
           .profile__name Гарипов Ренат Русланович
           .profile__study Башкирский государственный медицинский университет (БГМУ), 2019
           .profile__who Студент, 20 лет
-          .profile__tags Медицина, Альтернативная медицина, Современная медицина, Лечение рак, Альтернативная медицина
+          //- .profile__tags Медицина, Альтернативная медицина, Современная медицина, Лечение рак, Альтернативная медицина
+          .tags
+            .tag.tag--red Медицина
+            .tag.tag--green Лечение рака
+            .tag Современная медицина
           a(href="#profile-edit").btn.btn--small.btn--secondary.modal-open Редактировать
           a(href="#new-article").btn.btn--small.modal-open Написать статью
 
@@ -22,6 +26,37 @@ block content
     .row
       .col.col--lg-8
         include write.pug
+
+        .post.post--small.block
+          .post__top
+            .post__top-left
+              .user.user--small
+                .ava
+                  img(src="./img/user.png", alt="")
+                .user__container
+                  a(href="").user__name Гарипов Ренат
+              .date 30 октября
+            .post__top-right
+              .rating
+                .stars
+                  .star.star--active
+                    i.fa.fa-star
+                  .star.star--active
+                    i.fa.fa-star
+                  .star.star--active
+                    i.fa.fa-star
+                  .star.star--active
+                    i.fa.fa-star
+                  .star
+                    i.fa.fa-star
+                .rating__number 4.6
+          .post__middle
+            p.post__anons Бессознательное иллюстрирует латентный субъект. Как было показано выше, код гомогенно интегрирует филосовский тест. Кризис отчуждает индивидуальный психоанализ. Импульс сложен. Эриксоновский гипноз пространственно притягивает социометрический интеллект. Стимул вызывает страх.
+
+          include share.pug
+
+          include post-footer.pug
+
         - for (var i = 0; i < 3; i++)
           .post.post--small.block
             include post-top.pug
