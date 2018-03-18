@@ -116,7 +116,7 @@ body * {
   font-weight: 400;
   padding: 1rem 1.2rem;
 }
-.btn--full-size {
+.btn--full {
   text-align: center;
   width: 100%;
 }
@@ -1085,13 +1085,14 @@ p {
 .block {
   background-color: #fff;
   border: 1px solid #eee;
+  border-radius: 3px;
   margin-bottom: 3.2rem;
 }
 .block__label {
   border-bottom: 1px solid #eee;
   display: block;
   font-size: 1.6rem;
-  padding: 2.4rem;
+  padding: 2rem 2.4rem;
 }
 .block__label span {
   color: #aaa;
@@ -1990,7 +1991,7 @@ p {
 }
 .special-links .link {
   display: inline-block;
-  padding: 0 2.4rem;
+  padding: 0 3.2rem;
   position: relative;
 }
 .special-links .link span {
@@ -2032,6 +2033,271 @@ p {
   .special-links p {
     margin-left: 1.6rem;
   }
+}
+.lk-header-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.lk-header-container__left {
+  margin-bottom: 4rem;
+}
+.lk-header-container__right {
+  height: 100%;
+}
+.lk-header {
+  font-size: 2.4rem;
+  font-weight: 300;
+  -webkit-transform: translateY(1.3rem);
+  -ms-transform: translateY(1.3rem);
+  transform: translateY(1.3rem);
+}
+.lk-table thead {
+  background-color: transparent;
+  border-bottom: 1px solid #ddd;
+}
+.lk-table thead th {
+  color: #aaa;
+  padding: 1.6rem;
+}
+.lk-table__number {
+  display: inline-block;
+  margin-right: 2rem;
+}
+.lk-table tr {
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.lk-table tr:nth-child(even) {
+  background-color: transparent;
+}
+.lk-table tr:hover {
+  background-color: #fff;
+  box-shadow: 0px 4px 24px rgba(0,0,0,0.05);
+}
+.lk-table td {
+  padding: 1.6rem;
+  vertical-align: middle;
+}
+.lk-table .link {
+  color: #1a82cb;
+  font-weight: 500;
+  text-decoration: none;
+}
+.researchers {
+  margin-top: -2.4rem;
+}
+.researcher {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 -2.4rem;
+  padding: 2.4rem;
+  position: relative;
+}
+.researcher:last-child {
+  margin-bottom: -2.4rem;
+}
+.researcher__dropdown {
+  background-color: #fff;
+  box-shadow: 0px 6px 20px -4px rgba(17,17,17,0.4);
+  left: 8rem;
+  opacity: 0;
+  padding: 2.4rem;
+  position: absolute;
+  top: 6.4rem;
+  transition: all 0.3s ease;
+  -webkit-transform: translateY(1rem);
+  -ms-transform: translateY(1rem);
+  transform: translateY(1rem);
+  visibility: hidden;
+  z-index: 20;
+}
+.researcher__dropdown:after {
+  background-color: #fff;
+  height: 1.6rem;
+  width: 1.6rem;
+  content: '';
+  left: 2rem;
+  position: absolute;
+  top: -0.8rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.researcher__dropdown-link {
+  display: block;
+}
+.researcher__dropdown-link:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.researcher__dropdown-link:hover {
+  color: #1a82cb;
+}
+.researcher__left:hover .researcher__dropdown {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  visibility: visible;
+}
+.event .block__label {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.event__text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.lk-nav {
+  -webkit-transform: translateY(1.6rem);
+  -ms-transform: translateY(1.6rem);
+  transform: translateY(1.6rem);
+}
+.lk-nav__link {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #aaa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3.2rem;
+}
+.lk-nav__link--active {
+  color: #111;
+}
+.lk-nav__icon {
+  display: inline-block;
+  margin-right: 1.6rem;
+  width: 2rem;
+}
+.lk-nav__text {
+  display: inline-block;
+}
+.file-icon {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  height: 3.2rem;
+  width: 3.2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.file-icon--pdf {
+  background-color: #ea5757;
+  box-shadow: 0px 4px 5px rgba(234,87,87,0.2);
+}
+.file-icon--word {
+  background-color: #1a82cb;
+  box-shadow: 0px 4px 5px rgba(26,130,203,0.2);
+}
+.file-icon--excel {
+  background-color: #4fc01e;
+  box-shadow: 0px 4px 5px rgba(79,192,30,0.2);
+}
+.file-icon__extention {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.tasks {
+  margin: -2.4rem;
+}
+.tasks .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 2.4rem;
+  position: relative;
+}
+.tasks .task__background {
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  z-index: 0;
+}
+.tasks .task__background:after {
+  background-color: rgba(17,17,17,0.5);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.tasks .task__container {
+  position: relative;
+  z-index: 1;
+}
+.tasks .task__number {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  height: 3.2rem;
+  width: 3.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.tasks .task__name {
+  margin-bottom: 0.8rem;
+}
+.tasks .task__countdown {
+  color: #aaa;
+  font-size: 1.2rem;
+}
+.tasks .task:hover .task__background {
+  opacity: 1;
+}
+.tasks .task:hover .task__number {
+  border-color: #fff;
+  color: #fff;
+}
+.tasks .task:hover .task__name {
+  color: #fff;
+}
+.tasks .task:hover .task__countdown {
+  color: #fff;
 }
 .slick-prev,
 .slick-next {
@@ -2237,6 +2503,11 @@ body {
   -webkit-transform: translateY(0.4rem);
   -ms-transform: translateY(0.4rem);
   transform: translateY(0.4rem);
+}
+.common-link {
+  color: #1a82cb;
+  font-weight: 400;
+  text-decoration: none;
 }
 .main {
   display: block;

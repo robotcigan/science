@@ -1,0 +1,63 @@
+extends layout.pug
+
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--lg-2
+        include lk-nav.pug
+
+      .col.col--lg-7
+        .lk-header-container
+          .lk-header-container__left
+            h1.lk-header Название исследования
+          .lk-header-container__right
+            .status Статистическая обработка
+
+
+        - for (var i = 0; i < 6; i++)
+          .block.event
+            .block__label
+              .user.user--small
+                .ava
+                  img(src="./img/user.png", alt="")
+                .user__container
+                  a(href="").user__name Гарипов Ренат
+              .date 30 октября
+            .block__container
+              p.event__text Концессия вероятна. Следует считать, что при предъявлении регрессного требования аналогия закона умышленно возмещает товарный кредит. При наступлении согласия всех сторон франшиза предоставляет штраф. Доверенность правомерна.
+
+
+
+
+
+      .col.col--lg-3
+        .btn.btn--full Пригласить исследователя
+        br
+        br
+        .block
+          .block__label Мои задачи
+          .block__container
+            .tasks
+              - for (var i = 0; i < 2; i++)
+                a(href="").task
+                  .task__background(style="background-image: url(./img/registration.jpg)")
+                  .task__number 1
+                  .task__container
+                    .task__name Оформить данные
+                    .task__countdown Истекает через 2 дня
+
+        .block
+          .block__label Популярные исследования
+          .block__container
+            .tasks
+              - for (var i = 0; i < 2; i++)
+                a(href="").task
+                  .task__background(style="background-image: url(./img/registration.jpg)")
+                  .task__number 1
+                  .task__container
+                    .task__name Оформить данные
+                    .task__countdown Истекает через 2 дня
+
+  include post-share.pug

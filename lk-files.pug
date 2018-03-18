@@ -1,0 +1,153 @@
+extends layout.pug
+
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--lg-2
+        include lk-nav.pug
+
+      .col.col--lg-7
+        .lk-header-container
+          .lk-header-container__left
+            h1.lk-header Файлы
+
+        table.table.lk-table
+          thead
+            th №
+            th Название документа
+            th Автор
+            th Дата загрузки
+            th  
+          tbody
+            tr
+              td
+                .lk-table__number 1
+                .file-icon.file-icon--pdf
+                  .file-icon__extention PDF
+              td Данные по пациентам
+              td 
+                a(href="").link Ренат
+              td 17.10.2018
+              td
+                a(href="" download)
+                  img(src="./img/lk-download.svg", alt="").svg
+            tr
+              td
+                .lk-table__number 2
+                .file-icon.file-icon--word
+                  .file-icon__extention DOC
+              td Данные по пациентам
+              td 
+                a(href="").link Ренат
+              td 17.10.2018
+              td
+                a(href="" download)
+                  img(src="./img/lk-download.svg", alt="").svg
+            tr
+              td
+                .lk-table__number 3
+                .file-icon.file-icon--excel
+                  .file-icon__extention XLS
+              td Данные по пациентам
+              td 
+                a(href="").link Ренат
+              td 17.10.2018
+              td
+                a(href="" download)
+                  img(src="./img/lk-download.svg", alt="").svg
+            tr
+              td
+                .lk-table__number 4
+                .file-icon.file-icon--pdf
+                  .file-icon__extention PDF
+              td Данные по пациентам
+              td 
+                a(href="").link Ренат
+              td 17.10.2018
+              td
+                a(href="" download)
+                  img(src="./img/lk-download.svg", alt="").svg
+            tr
+              td
+                .lk-table__number 1
+                .file-icon.file-icon--pdf
+                  .file-icon__extention PDF
+              td Данные по пациентам
+              td 
+                a(href="").link Ренат
+              td 17.10.2018
+              td
+                a(href="" download)
+                  img(src="./img/lk-download.svg", alt="").svg
+            tr
+              td
+                .lk-table__number 2
+                .file-icon.file-icon--word
+                  .file-icon__extention DOC
+              td Данные по пациентам
+              td 
+                a(href="").link Ренат
+              td 17.10.2018
+              td
+                a(href="" download)
+                  img(src="./img/lk-download.svg", alt="").svg
+            tr
+              td
+                .lk-table__number 3
+                .file-icon.file-icon--excel
+                  .file-icon__extention XLS
+              td Данные по пациентам
+              td 
+                a(href="").link Ренат
+              td 17.10.2018
+              td
+                a(href="" download)
+                  img(src="./img/lk-download.svg", alt="").svg
+            tr
+              td
+                .lk-table__number 4
+                .file-icon.file-icon--pdf
+                  .file-icon__extention PDF
+              td Данные по пациентам
+              td 
+                a(href="").link Ренат
+              td 17.10.2018
+              td
+                a(href="" download)
+                  img(src="./img/lk-download.svg", alt="").svg
+
+
+
+
+
+      .col.col--lg-3
+        .btn.btn--full Пригласить исследователя
+        br
+        br
+        .block
+          .block__label Мои задачи
+          .block__container
+            .tasks
+              - for (var i = 0; i < 2; i++)
+                a(href="").task
+                  .task__background(style="background-image: url(./img/registration.jpg)")
+                  .task__number 1
+                  .task__container
+                    .task__name Оформить данные
+                    .task__countdown Истекает через 2 дня
+
+        .block
+          .block__label Популярные исследования
+          .block__container
+            .tasks
+              - for (var i = 0; i < 2; i++)
+                a(href="").task
+                  .task__background(style="background-image: url(./img/registration.jpg)")
+                  .task__number 1
+                  .task__container
+                    .task__name Оформить данные
+                    .task__countdown Истекает через 2 дня
+
+  include post-share.pug

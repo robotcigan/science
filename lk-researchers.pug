@@ -1,0 +1,73 @@
+extends layout.pug
+
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--lg-2
+        include lk-nav.pug
+
+      .col.col--lg-7
+        .lk-header-container
+          .lk-header-container__left
+            h1.lk-header Исследователи
+
+        .special-links
+          .links
+            a.link.link--active(href="") Все
+            a.link(href="") Онлайн
+            a.link(href="") Офлайн
+        .block
+          .block__container
+            .researchers
+              - for (var i = 0; i < 8; i++)
+                .researcher
+                  .researcher__left
+                    .user
+                      .ava
+                        img(src="./img/user.jpg", alt="")
+                      .user__container
+                        a(href="").user__name Игнатьева Полина
+                        .user__info Студент, 20 лет
+                    .researcher__dropdown
+                      a(href="").researcher__dropdown-link Посмотреть профиль
+                      a(href="").researcher__dropdown-link Написать сообщение
+                      a(href="").researcher__dropdown-link Дать задание
+                      a(href="").researcher__dropdown-link Идалить из исследования
+                  .researcher__right
+                    .common-link Написать сообщение
+
+
+
+
+
+      .col.col--lg-3
+        .btn.btn--full Пригласить исследователя
+        br
+        br
+        .block
+          .block__label Мои задачи
+          .block__container
+            .tasks
+              - for (var i = 0; i < 2; i++)
+                a(href="").task
+                  .task__background(style="background-image: url(./img/registration.jpg)")
+                  .task__number 1
+                  .task__container
+                    .task__name Оформить данные
+                    .task__countdown Истекает через 2 дня
+
+        .block
+          .block__label Популярные исследования
+          .block__container
+            .tasks
+              - for (var i = 0; i < 2; i++)
+                a(href="").task
+                  .task__background(style="background-image: url(./img/registration.jpg)")
+                  .task__number 1
+                  .task__container
+                    .task__name Оформить данные
+                    .task__countdown Истекает через 2 дня
+
+  include post-share.pug

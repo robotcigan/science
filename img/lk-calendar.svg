@@ -1,0 +1,14 @@
+<svg width="15" height="16" viewBox="0 0 15 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-20400 -352)">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#lk-calendar" transform="translate(20400 352)" fill="#AAAAAA"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="lk-calendar" d="M 12.8 1.60001L 12 1.60001L 12 0L 10.4 0L 10.4 1.60001L 4.00001 1.60001L 4.00001 0L 2.4 0L 2.4 1.60001L 1.60001 1.60001C 0.716024 1.60001 0.00802503 2.316 0.00802503 3.20002L 6.86645e-09 14.4C 6.86645e-09 15.284 0.715987 16 1.60001 16L 12.8 16C 13.684 16 14.4 15.284 14.4 14.4L 14.4 3.19999C 14.4 2.316 13.684 1.60001 12.8 1.60001ZM 12.8 14.4L 1.60001 14.4L 1.60001 5.59998L 12.8 5.59998L 12.8 14.4Z"/>
+</defs>
+</svg>
