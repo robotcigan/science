@@ -7,22 +7,37 @@ block content
     
     .messages.block
       .messages__left
-        - for (var i = 0; i < 6; i++)
+        .dialog.dialog--active
           .user
             .ava
-              img(src="./img/user.png", alt="")
+              img(src="./img/user.jpg", alt="")
             .user__container
               a(href="").user__name Гарипов Ренат
               .user__message Прекрасная работа. Я думаю буду сеsdfhsdhd as fshfd sfd 
+        - for (var i = 0; i < 9; i++)
+          .dialog
+            .user
+              .ava
+                img(src="./img/user.jpg", alt="")
+              .user__container
+                a(href="").user__name Гарипов Ренат
+                .user__message Прекрасная работа. Я думаю буду сеsdfhsdhd as fshfd sfd 
       .messages__right
-        - for (var i = 0; i < 4; i++)
-          .message
-            a(href="").ava
-              img(src="./img/user.png", alt="")
-            .message__container
-              .message__top
-                a(href="").message__name Савельев Алексей
-                .date 12 сентября 2017
-              p.message__text Прекрасная работа. Я думаю буду следить за прогрессом этого исследования и с удовольствием бы присоединился к вашей команде. Я надеюсь вы сможете найти спонсоров на ваш проект и продолжите развивать это направление в дальнейшем.
+        .messages__right-current
+          .user
+            .ava
+              img(src="./img/user.jpg", alt="")
+            .user__container
+              a(href="").user__name Анастасия Воронцова
+        .messages__right-container
+          - for (var i = 0; i < 4; i++)
+            .message
+              a(href="").ava
+                img(src="./img/user.png", alt="")
+              .message__container
+                .message__top
+                  a(href="").message__name Савельев Алексей
+                  .date 12 сентября 2017
+                p.message__text Прекрасная работа. Я думаю буду следить за прогрессом этого исследования и с удовольствием бы присоединился к вашей команде. Я надеюсь вы сможете найти спонсоров на ваш проект и продолжите развивать это направление в дальнейшем.
         include write.pug
 

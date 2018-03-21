@@ -1523,6 +1523,7 @@ p {
   border-right: 1px solid #eee;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  max-height: 81.5vh;
   max-width: 37rem;
   overflow: hidden;
 }
@@ -1534,8 +1535,29 @@ p {
 .messages__left .user__container {
   max-width: 80%;
 }
-.messages .write {
+.messages__right {
+  position: relative;
+}
+.messages__right-container {
+  padding: 4rem;
+}
+.messages__right-current {
+  border: 1px solid #eee;
+  padding: 2.3rem 0;
+  padding-left: 4rem;
+}
+.messages__right-current .ava {
+  margin-right: 1.6rem;
+}
+.messages__right-current .user__name {
+  color: #111;
+  font-weight: 500;
+}
+.messages__right .write {
+  bottom: 0;
   margin-bottom: 0;
+  position: absolute;
+  width: 100%;
 }
 .message {
   display: -webkit-box;
@@ -1565,6 +1587,10 @@ p {
 }
 .message .date {
   font-size: 1.2rem;
+}
+.dialog--active {
+  background-color: rgba(238,238,238,0.3);
+  border-right: 3px solid #1a82cb;
 }
 @media (max-width: 767px) {
   .message__container {

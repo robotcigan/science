@@ -4,6 +4,7 @@
   &__left
     border-right $border
     flex-shrink 0
+    max-height: 81.5vh
     max-width 37rem
     overflow hidden
     .user
@@ -12,8 +13,25 @@
       padding 2.4rem
       &__container
         max-width 80%
-  .write
-    margin-bottom 0
+  &__right
+    position relative
+    &-container
+      padding 4rem
+    &-current
+      border $border
+      padding 2.3rem 0
+      padding-left 4rem
+      .ava
+        margin-right 1.6rem
+      .user__name
+        color $main
+        font-weight 500
+    .write
+      bottom 0
+      margin-bottom 0
+      position absolute
+      width 100%
+    
 
 .message
   display flex
@@ -32,6 +50,11 @@
       color $primary
   .date
     font-size 1.2rem
+
+.dialog
+  &--active
+    background-color rgba($light-gray, .3)
+    border-right 3px solid $primary
 
 @media(max-width 767px)
   .message
