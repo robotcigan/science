@@ -1559,6 +1559,12 @@ p {
   position: absolute;
   width: 100%;
 }
+.messages--chat .messages__left .user__container {
+  display: none;
+}
+.messages--chat .messages__left .ava {
+  margin-right: 0;
+}
 .message {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1592,22 +1598,47 @@ p {
   background-color: rgba(238,238,238,0.3);
   border-right: 3px solid #1a82cb;
 }
-@media (max-width: 767px) {
-  .message__container {
-    padding-left: 0.8rem;
+@media (max-width: 1000px) {
+  .messages {
+    margin-bottom: 8rem;
   }
-  .message__top {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding-top: 1.6rem;
+  .messages .ava {
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-right: 0.8rem;
   }
-  .message .date {
+  .messages__left .user {
+    padding: 1rem;
+  }
+  .messages__left .user .ava {
     margin-right: 0;
   }
-  .message__text {
-    margin-left: -5.6rem;
-    margin-top: 2.4rem;
+  .messages__left .user__container {
+    display: none;
+  }
+  .messages__right-current {
+    padding: 1rem 1.2rem;
+  }
+  .messages__right-container {
+    padding: 1rem 1.2rem;
+  }
+  .messages .message .ava {
+    margin-right: 0.8rem;
+  }
+  .messages .message__name {
+    font-size: 1.4rem;
+    margin-left: 4rem;
+    margin-right: 0.8rem;
+  }
+  .messages .message__container {
+    padding-left: 0;
+    margin-left: -4rem;
+  }
+  .messages .message .date {
+    margin-right: 0;
+  }
+  .messages .user__name {
+    font-size: 1.4rem;
   }
 }
 .profile {

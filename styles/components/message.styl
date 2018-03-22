@@ -31,6 +31,16 @@
       margin-bottom 0
       position absolute
       width 100%
+
+.messages
+  &--chat
+    .messages
+      &__left
+        .user
+          &__container
+            display none
+        .ava
+          margin-right 0
     
 
 .message
@@ -56,15 +66,51 @@
     background-color rgba($light-gray, .3)
     border-right 3px solid $primary
 
-@media(max-width 767px)
-  .message
-    &__container
-      padding-left .8rem
-    &__top
-      justify-content space-between
-      padding-top 1.6rem
-    .date
-      margin-right 0
-    &__text
-      margin-left -5.6rem
-      margin-top 2.4rem
+
+@media(max-width 1000px)
+  .messages
+    margin-bottom 8rem
+    .ava
+      circle(3.2rem)
+      margin-right .8rem
+    &__left
+      .user
+        padding 1rem
+        .ava
+          margin-right 0
+        &__container
+          display none
+    &__right
+      &-current
+        padding 1rem 1.2rem
+      &-container
+        padding 1rem 1.2rem
+    .message
+      .ava
+        margin-right .8rem
+      &__name
+        font-size 1.4rem
+        margin-left 4rem
+        margin-right .8rem
+      &__container
+        padding-left 0
+        margin-left -4rem
+      .date
+        margin-right 0
+    .user
+      &__name
+        font-size 1.4rem
+
+
+// @media(max-width 767px)
+//   .message
+//     &__container
+//       padding-left .8rem
+//     &__top
+//       justify-content space-between
+//       padding-top 1.6rem
+//     .date
+//       margin-right 0
+//     &__text
+//       margin-left -5.6rem
+//       margin-top 2.4rem

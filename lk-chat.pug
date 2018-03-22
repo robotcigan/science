@@ -1,0 +1,82 @@
+extends layout.pug
+
+
+block content
+  
+  .grid.grid--container
+    .row
+      .col.col--lg-2
+        include lk-nav.pug
+
+      .col.col--lg-7
+
+        .messages.messages--chat.block
+          .messages__left
+            .dialog.dialog--active
+              .user
+                .ava
+                  img(src="./img/user.jpg", alt="")
+                .user__container
+                  a(href="").user__name Гарипов Ренат
+                  .user__message Прекрасная работа. Я думаю буду сеsdfhsdhd as fshfd sfd 
+            - for (var i = 0; i < 9; i++)
+              .dialog
+                .user
+                  .ava
+                    img(src="./img/user.jpg", alt="")
+                  .user__container
+                    a(href="").user__name Гарипов Ренат
+                    .user__message Прекрасная работа. Я думаю буду сеsdfhsdhd as fshfd sfd 
+          .messages__right
+            .messages__right-current
+              .user
+                .ava
+                  img(src="./img/user.jpg", alt="")
+                .user__container
+                  a(href="").user__name Анастасия Воронцова
+            .messages__right-container
+              - for (var i = 0; i < 4; i++)
+                .message
+                  a(href="").ava
+                    img(src="./img/user.png", alt="")
+                  .message__container
+                    .message__top
+                      a(href="").message__name Савельев Алексей
+                      .date 12 сентября 2017
+                    p.message__text Прекрасная работа. Я думаю буду следить за прогрессом этого исследования и с удовольствием бы присоединился к вашей команде. Я надеюсь вы сможете найти спонсоров на ваш проект и продолжите развивать это направление в дальнейшем.
+            include write.pug
+
+
+
+
+
+
+      .col.col--lg-3
+        .btn.btn--full Пригласить исследователя
+        br
+        br
+        .block
+          .block__label Мои задачи
+          .block__container
+            .tasks
+              - for (var i = 0; i < 2; i++)
+                a(href="").task
+                  .task__background(style="background-image: url(./img/registration.jpg)")
+                  .task__number 1
+                  .task__container
+                    .task__name Оформить данные
+                    .task__countdown Истекает через 2 дня
+
+        .block
+          .block__label Популярные исследования
+          .block__container
+            .tasks
+              - for (var i = 0; i < 2; i++)
+                a(href="").task
+                  .task__background(style="background-image: url(./img/registration.jpg)")
+                  .task__number 1
+                  .task__container
+                    .task__name Оформить данные
+                    .task__countdown Истекает через 2 дня
+
+  include post-share.pug
