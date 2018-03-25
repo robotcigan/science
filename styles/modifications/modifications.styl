@@ -105,6 +105,52 @@
     font-family $font
     font-weight 300
 
+.fc
+  margin-top 1rem
+  &-left
+    h2
+      font-size 2.4rem
+      font-weight 300
+      text-transform capitalize
+      transform translateY(4px)
+  &-event, &-event-dot
+    background-color transparent
+    border none
+    border-top 2px solid $green
+    color $green
+    padding-top 4px
+    position relative
+    text-align center
+    &:before
+      background-color #fff
+      border-radius 50%
+      border 2px solid $green
+      circle(8px)
+      content ''
+      left 0
+      position absolute
+      top -7px
+    &:after
+      background-color #fff
+      border-radius 50%
+      border 2px solid $green
+      circle(8px)
+      content ''
+      position absolute
+      right 0
+      top -7px
+  &-not-start
+    &:before
+      display none
+  &-not-end
+    &:after
+      display none
+  &-day-top
+    padding-right 5px !important
+    padding-top 7px !important
+  &-day-number
+    font-size 1.2rem
+
 
 
 @media(max-width 767px)

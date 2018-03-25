@@ -105,6 +105,22 @@ $(document).ready(function() {
     $(this).closest('.tabs').find('.tabs__content').eq(index).addClass('tabs__content--active');
   });
 
+  // Календарь
+  $('.calendar').fullCalendar({
+    events: [
+      {
+        title  : 'Собрать данные',
+        start  : '2018-03-23',
+        end    : '2018-03-26'
+      },
+      {
+        title  : 'Какое-то действие',
+        start  : '2018-03-11',
+        end    : '2018-03-15'
+      }
+    ]
+  });
+
   // SVG magic
   jQuery('img.svg').each(function(){
     var $img = jQuery(this);

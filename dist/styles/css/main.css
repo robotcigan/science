@@ -2527,6 +2527,64 @@ p {
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-weight: 300;
 }
+.fc {
+  margin-top: 1rem;
+}
+.fc-left h2 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  -webkit-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  transform: translateY(4px);
+}
+.fc-event,
+.fc-event-dot {
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid #4fc01e;
+  color: #4fc01e;
+  padding-top: 4px;
+  position: relative;
+  text-align: center;
+}
+.fc-event:before,
+.fc-event-dot:before {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #4fc01e;
+  height: 8px;
+  width: 8px;
+  content: '';
+  left: 0;
+  position: absolute;
+  top: -7px;
+}
+.fc-event:after,
+.fc-event-dot:after {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #4fc01e;
+  height: 8px;
+  width: 8px;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -7px;
+}
+.fc-not-start:before {
+  display: none;
+}
+.fc-not-end:after {
+  display: none;
+}
+.fc-day-top {
+  padding-right: 5px !important;
+  padding-top: 7px !important;
+}
+.fc-day-number {
+  font-size: 1.2rem;
+}
 @media (max-width: 767px) {
   .slick-dots {
     bottom: -3rem;
