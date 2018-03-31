@@ -10,33 +10,32 @@ block content
 
       .col.col--lg-7
         .lk-header-container
-          h1.lk-header Исследователи
+          h1.lk-header Задачи
+          form.search
+            input.search__input(type="text" placeholder="Поиск")
+            button.search__btn
+              img.svg(src="./img/search.svg" alt="")
+          a(href="#new-task").btn.btn--green.modal-open Добавить
 
         .special-links
           .links
             a.link.link--active(href="") Все
-            a.link(href="") Онлайн
-            a.link(href="") Офлайн
-        .block
-          .block__container
-            .researchers
-              - for (var i = 0; i < 8; i++)
-                .researcher
-                  .researcher__left
-                    .user
-                      .ava
-                        img(src="./img/user.jpg", alt="")
-                      .user__container
-                        a(href="").user__name Игнатьева Полина
-                        .user__info Студент, 20 лет
-                    .researcher__dropdown
-                      a(href="").researcher__dropdown-link Посмотреть профиль
-                      a(href="").researcher__dropdown-link Написать сообщение
-                      a(href="").researcher__dropdown-link Дать задание
-                      a(href="").researcher__dropdown-link Идалить из исследования
-                  .researcher__right
-                    .common-link Написать сообщение
+            a.link(href="") Решаю
+            a.link(href="") Получил
 
+        table.table.lk-table.lk-table--tasks
+          thead
+            th Название
+            th Крайний срок
+            th Поручитель
+            th Ответственный
+          tbody
+            - for (var i = 0; i < 8; i++)
+              tr
+                td TechnoRaum.ru - верстка и программирование
+                td 7 Марта, 18:00
+                td Анастасия Соколовская
+                td Дмитрий Кошурин
 
 
 
@@ -70,3 +69,19 @@ block content
                     .task__countdown Истекает через 2 дня
 
   include post-share.pug
+
+
+  #new-task.modal
+    .modal__title Добавить задачу
+    .modal__container
+      form
+        .form-control
+          input(type="text")
+          label Название задачи
+        .form-control
+          textarea
+          label Текст
+        .form-control
+          input(type="text").datepicker
+          label Крайний срок
+        .btn Добавить задачу

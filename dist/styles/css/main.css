@@ -2035,7 +2035,7 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #f6fafd;
+  background-color: #e8edf1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2101,19 +2101,19 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
-.lk-header-container__left {
-  margin-bottom: 4rem;
-}
-.lk-header-container__right {
-  height: 100%;
+.lk-header-container .search {
+  background-color: #fff;
+  margin-right: 2rem;
+  width: 50%;
 }
 .lk-header {
   font-size: 2.4rem;
   font-weight: 300;
-  -webkit-transform: translateY(1.3rem);
-  -ms-transform: translateY(1.3rem);
-  transform: translateY(1.3rem);
+}
+.lk-table {
+  margin-top: 3.2rem;
 }
 .lk-table thead {
   background-color: transparent;
@@ -2146,6 +2146,18 @@ p {
   color: #1a82cb;
   font-weight: 500;
   text-decoration: none;
+}
+.lk-table--tasks tr td {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.lk-table--tasks tr td:nth-child(2) {
+  color: #777;
+}
+.lk-table--tasks th:first-child,
+.lk-table--tasks td:first-child {
+  max-width: 20rem;
 }
 .researchers {
   margin-top: -2.4rem;
