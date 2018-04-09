@@ -1,0 +1,159 @@
+.about-page
+  background-color #fff
+  margin-top -3.2rem
+
+.about
+  align-items center
+  background-repeat no-repeat
+  background-size cover
+  background-position center
+  display flex
+  height 100vh
+  justify-content center
+  max-height 68rem
+  margin-bottom 7.2rem
+  &__container
+    display flex
+    flex-wrap wrap
+    justify-content center
+    max-width 62rem
+    text-align center
+  &__title
+    font-size 3.2rem
+    margin-bottom 2rem
+  &__subtitle
+    line-height 1.4
+    max-width 50rem
+    margin-bottom 2rem
+
+.about-steps
+  margin-bottom 10rem
+  position relative
+  &:before
+    content ''
+    border-top 1px dashed $gray
+    height 1px
+    position absolute
+    top 7.1rem
+    width 100%
+    z-index 0
+  .step
+    text-align center
+    &__number
+      color #ddd
+      font-size 4.8rem
+      font-weight 300
+      margin-bottom 5rem
+      position relative
+      &:after
+        background-color #fff
+        border 2px solid $primary
+        border-radius 50%
+        bottom -3.1rem
+        circle(.9rem)
+        content ''
+        left 0
+        margin auto
+        position absolute
+        right 0
+    &__title
+      color $primary
+      font-size 2.4rem
+      font-weight 300
+      margin-bottom 2rem
+    &__text
+      color $gray
+      font-size 1.4rem
+
+.about-come-together
+  margin-bottom 10rem
+  &__img
+    margin-bottom -4rem
+    transform translateX(-10rem)
+  &__title
+    font-size 2.4rem
+    margin-bottom 1.6rem
+
+.about-slider
+  position relative
+  z-index 10
+  .slide
+    background-color $primary
+    color #fff
+    padding 4rem 3.2rem
+    padding-top 6.4rem
+    position relative
+    &:after
+      background url("../../img/quote.svg") center no-repeat
+      content ''
+      height 1.4rem
+      left 3.2rem
+      position absolute
+      top 3.2rem
+      width 1.6rem
+    &__text
+      font-size 1.2rem
+    .user
+      &__name
+        color #fff
+        font-size 1.2rem
+      &__info
+        color #fff
+        font-size 1.2rem
+        opacity .5
+
+
+.about-video
+  display block
+  margin-top -8rem
+  position relative
+  z-index 0
+  &__play
+    align-items center
+    background-color #fff
+    box-shadow 0px 6px 12px rgba(26, 130, 203, 0.15)
+    border-radius 50%
+    bottom 0
+    circle(10rem)
+    display flex
+    content ''
+    justify-content center
+    left 0
+    margin auto
+    position absolute
+    right 0
+    top 0
+    transition all .3s ease
+    img
+      display block
+      max-width 2.4rem
+      transform translate(.3rem, .1rem)
+  img
+    width 100%
+  &:hover
+    .about-video
+      &__play
+        transform scale(1.08)
+
+.about-stats
+  border-bottom $border
+  margin 10rem 0
+  padding-bottom 10rem
+  .about-stat
+    text-align center
+    &__number
+      color $primary
+      font-size 3.2rem
+      font-weight 500
+      margin-bottom 1.6rem
+    &__text
+      color $gray
+      font-size 1.4rem
+      line-height 1.4
+
+.about-final
+  margin-bottom 10rem
+  text-align center
+  &__title
+    line-height 1.4
+

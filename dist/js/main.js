@@ -30,6 +30,8 @@ $(document).ready(function () {
   //   $('.mobile-menu__link').eq(0).addClass('mobile-menu__link--active');
   // }
 
+  $('.slider').slick({});
+
   // Custom select
   $('.custom-select').select2({
     minimumResultsForSearch: Infinity,
@@ -95,6 +97,10 @@ $(document).ready(function () {
   // Модальное окно
   $('.modal-open').magnificPopup({
     type: 'inline'
+  });
+
+  $('.modal-open-youtube').magnificPopup({
+    type: 'iframe'
   });
 
   // Табы

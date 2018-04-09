@@ -1,0 +1,119 @@
+extends layout.pug
+
+block content
+  
+  .about-page
+
+    .about(style="background-image: url(img/about.jpg)")
+      .about__container
+        .about__title Окунитесь в мир научных исследований
+        .about__subtitle Synaps — это платформа объединяющая людей для достижения <br> общих целей в науке, исследованиях и медицине.
+        .btn Зарегистрироваться
+
+    .grid.grid--container
+      .about-steps
+        .row
+          .col.col--sm-4
+            .step
+              .step__number 01
+              .step__title Зарегистрируйтесь
+              .step__text Процесс регистрации займет не более 2 минут
+          .col.col--sm-4
+            .step
+              .step__number 02
+              .step__title Создайте исследование
+              .step__text Найдите единомышленников или пригласите своих коллег
+          .col.col--sm-4
+            .step
+              .step__number 03
+              .step__title Покаряйте вершины
+              .step__text Не останавливайтесь на достигнутом и решайте новые задачи
+
+
+      .about-come-together
+        .row.row--sm-center
+          .col.col--sm-6
+            .about-come-together__img
+              img(src="./img/about-1.png", alt="")
+          .col.col--sm-6
+            .about-come-together__title Объединяем единомышленников
+            .about-come-together__text
+              p Synaps — больше, чем просто социальная сеть. Это место где единомышленники могут легко и свободно воплощать в жизнь исследования. Вещество, несмотря на внешние воздействия, отклоняет разрыв. Непосредственно из законов сохранения следует, что магнит мономолекулярно трансформирует ультрафиолетовый лептон. Ударная волна эксперментально верифицируема. Линза растягивает изобарический гидродинамический удар при любом их взаимном расположении.
+              p Многочисленные расчеты предсказывают, а эксперименты подтверждают, что лептон вращает экранированный гидродинамический удар. Плазма, в отличие от классического случая, восстанавливает кварк.
+              p Под воздействием переменного напряжения квантовое состояние ненаблюдаемо. Зеркало переворачивает пульсар. Электрон спонтанно стабилизирует квант.
+              .btn.btn--secondary Присоединиться
+
+
+      .about-easy
+        .row
+          .col.col--md-3
+            .about-slider.slider
+              - for (var i = 0; i < 3; i++)
+                .about-slider__slide.slide
+                  p.slide__text Благодаря Synaps я смогла создать исследование, посвещенное изучению эфекта плацебо. Я очень быстро нашла единомышленников, которые по всему СНГ помогали мне со статистическими данными. Сейчас на их основе готовлю диссертация.
+                  .user
+                    .ava
+                      img(src="./img/user.jpg", alt="")
+                    .user__container
+                      a(href="").user__name Маргарита Смирнова
+                      .user__info Студент, 20 лет
+          .col.col--md-6.col--md-offset-1
+            h2 Слишком легко начать!
+            p Многочисленные расчеты предсказывают, а эксперименты подтверждают, что лептон вращает экранированный гидродинамический удар. Плазма, в отличие от классического случая, восстанавливает кварк.
+            .btn.btn--secondary Присоединиться
+      
+      .row
+        .col.col--md-11.col--md-offset-1
+          a(href="https://www.youtube.com/watch?v=Z-OytmtYoOI").about-video.modal-open-youtube
+            img(src="./img/about-2.jpg", alt="")
+            .about-video__play
+              img(src="./img/play-triangle.svg")
+
+        .col.col--sm-10.col--sm-offset-1
+          .about-stats
+            .row
+              .col.col--sm-3
+                .about-stat
+                  .about-stat__number 2 000+
+                  .about-stat__text Зарегистрированных пользователей
+              .col.col--sm-3
+                .about-stat
+                  .about-stat__number 768
+                  .about-stat__text Завершенных исследования на сервисе
+              .col.col--sm-3
+                .about-stat
+                  .about-stat__number 42
+                  .about-stat__text Проекта по статистике создается каждый день
+              .col.col--sm-3
+                .about-stat
+                  .about-stat__number
+                    img(src="./img/infinity.svg", alt="")
+                  .about-stat__text Количество возможностей
+
+        .col.col--md-6.col--md-offset-3
+          .about-final
+            h2.about-final__title Зарегистрируйтесь и постигните невиданные ранее горизонты исследований
+            p.about-final__text Всего лишь одна кнопка отделяет вас от коллабораций с единомышленниками, коллегами и научными деятелями
+            .btn Зарегистрироваться
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
