@@ -1,0 +1,49 @@
+.event
+  display block
+  &:not(:last-child)
+    margin-bottom 2.4rem
+
+.modal--event
+  &__wallpaper
+    background-size cover
+    height 35rem
+    position relative
+    &:before
+      background-color rgba($main, .4)
+      circle(100%)
+      content ''
+      left 0
+      position absolute
+      top 0
+  &__title
+    bottom 3.2rem
+    color #fff
+    font-size 2.4rem
+    font-weight 600
+    left 3.2rem
+    position absolute
+  &__date,
+  &__address
+    img,
+    span
+      display inline-block
+      vertical-align middle
+    img
+      margin-right .8rem
+  &__date
+    margin-bottom 1.2rem
+  &__map
+    margin 0 -3.2rem
+    margin-bottom 4rem
+    iframe
+      height 35rem
+      width 100%
+  .mfp-close
+    color #fff !important
+
+
+@media(max-width 1000px)
+  .modal--event
+    &__map
+      margin 0
+      margin-bottom 4rem

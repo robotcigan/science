@@ -56,7 +56,19 @@ block content
                     img(src="./img/user.png", alt="")
                   .user__container
                     a(href="").user__name Ренат
-  
+        .block
+          a(href="#collegs").block__label.modal-open Мероприятия 
+            span 12
+          .block__container
+            - for (var i = 0; i < 4; i++)
+              a(href="#event").modal-open.event
+                .user
+                  .ava
+                    img(src="./img/popular.jpg", alt="")
+                  .user__container
+                    .user__name Современная медицина
+                    .user__info 1 223 участника
+    
 
   #new-group.modal
     .modal__title Создать сообщество
@@ -79,4 +91,29 @@ block content
           textarea
           label Описание сообщества
         .btn Создать
+
+
+  #event.modal.modal--event
+    .modal--event__wallpaper(style="background-image: url(./img/event.jpg)")
+      .modal--event__title Очень длинное название мероприятия
+    .modal__container
+      .modal--event__date
+        img(src="./img/clock.svg", alt="")
+        span 17 апреля, вторник
+      .modal--event__address
+        img(src="./img/placeholder.svg", alt="")
+        span Краснодар, улица Пушкина, дом Колотушкина
+      br
+      p.modal--event__text Очевидно проверяется, что арифметическая прогрессия положительна. Скалярное поле необходимо и достаточно. Наибольший Общий Делитель (НОД) последовательно создает косвенный функциональный анализ. Предел функции восстанавливает анормальный контрпример. Можно предположить, что система координат существенно трансформирует абсолютно сходящийся ряд. Интеграл Фурье, как следует из вышесказанного, упорядочивает расходящийся ряд.
+      .modal--event__map
+        iframe(src="https://yandex.ru/map-widget/v1/-/CBqB6Ob~8A" frameborder="0")
+      .btn Записаться
+
+
+
+
+
+
+
+
 

@@ -2555,6 +2555,65 @@ h2 {
 .about-final__title {
   line-height: 1.4;
 }
+.event {
+  display: block;
+}
+.event:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+.modal--event__wallpaper {
+  background-size: cover;
+  height: 35rem;
+  position: relative;
+}
+.modal--event__wallpaper:before {
+  background-color: rgba(17,17,17,0.4);
+  height: 100%;
+  width: 100%;
+  content: '';
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.modal--event__title {
+  bottom: 3.2rem;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 600;
+  left: 3.2rem;
+  position: absolute;
+}
+.modal--event__date img,
+.modal--event__address img,
+.modal--event__date span,
+.modal--event__address span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.modal--event__date img,
+.modal--event__address img {
+  margin-right: 0.8rem;
+}
+.modal--event__date {
+  margin-bottom: 1.2rem;
+}
+.modal--event__map {
+  margin: 0 -3.2rem;
+  margin-bottom: 4rem;
+}
+.modal--event__map iframe {
+  height: 35rem;
+  width: 100%;
+}
+.modal--event .mfp-close {
+  color: #fff !important;
+}
+@media (max-width: 1000px) {
+  .modal--event__map {
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+}
 .slick-prev,
 .slick-next {
   top: 50%;
