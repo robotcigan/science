@@ -50,6 +50,9 @@ $(document).ready(function () {
   $('.form-control input').on('keyup change', function () {
     formValidation($(this));
   });
+  $('.form-control select').on('keyup change', function () {
+    formValidation($(this));
+  });
   $('.form-control textarea').on('keyup change', function () {
     formValidation($(this));
   });
@@ -61,6 +64,8 @@ $(document).ready(function () {
       self.parent().find('label').removeClass('form-control__label--active');
     }
   }
+
+  formValidation($('.custom-select'));
 
   // mobile menu
   $('.mobile-toggle').on('click', function () {

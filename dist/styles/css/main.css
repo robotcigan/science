@@ -270,12 +270,17 @@ body * {
   -webkit-animation: fadeUp 0.3s forwards;
   animation: fadeUp 0.3s forwards;
 }
+.select2-container--focus {
+  margin: 0;
+  padding: 0 !important;
+}
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: #1a82cb;
 }
 .checkbox {
   cursor: pointer;
   display: block;
+  margin-bottom: 2.4rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -295,7 +300,7 @@ body * {
   z-index: 1;
 }
 .checkbox__label:after {
-  color: #111;
+  color: #1a82cb;
   content: "\f00c";
   display: none;
   font-family: 'FontAwesome';

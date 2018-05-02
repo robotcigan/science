@@ -107,8 +107,49 @@ block content
       p.modal--event__text Очевидно проверяется, что арифметическая прогрессия положительна. Скалярное поле необходимо и достаточно. Наибольший Общий Делитель (НОД) последовательно создает косвенный функциональный анализ. Предел функции восстанавливает анормальный контрпример. Можно предположить, что система координат существенно трансформирует абсолютно сходящийся ряд. Интеграл Фурье, как следует из вышесказанного, упорядочивает расходящийся ряд.
       .modal--event__map
         iframe(src="https://yandex.ru/map-widget/v1/-/CBqB6Ob~8A" frameborder="0")
-      .btn Записаться
+      a(href="#subscribe").btn.modal-open Записаться
 
+  #subscribe.modal.modal--subscribe
+    .modal__title Записаться
+    .modal__container
+      form
+        .form-control
+          input(type="text")
+          label Секция
+        .form-control
+          input(type="text")
+          label Название доклада
+        .form-control
+          input(type="text")
+          label ФИО
+        .form-control
+          input(type="text")
+          label ВУЗ
+        .form-control
+          select.custom-select
+            option Преподаватель
+            option Студент
+            option Ординатор
+            option Аспирант
+            option Научный руководитель
+          label Научная область
+        .form-control
+          select.custom-select
+            option Очная
+            option Заочная
+            option Стендовый доклад
+          label Форма участия
+        .form-control
+          input(type="text")
+          label Почтовый адрес учебы/работы
+        .form-control
+          input(type="text")
+          label Электронная почта
+        .checkbox
+          input(type="checkbox" id="checkbox")
+          label(for="checkbox").checkbox__label
+          label.checkbox__text(for="checkbox") Я согласен на обработку персональных данных
+        .btn Зарегистрироваться
 
 
 

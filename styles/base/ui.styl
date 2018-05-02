@@ -119,7 +119,6 @@
     .form-control__icon
       color $error
 
-
 .select2
   &-container--default
     .select2-selection__arrow b
@@ -149,7 +148,9 @@
     box-shadow 0 16px 24px 0 rgba(135, 149, 163, .1)
   &-dropdown.select2-dropdown--below 
     animation fadeUp .3s forwards
-
+  &-container--focus
+    margin 0
+    padding 0 !important
 
 // dropdown element hover
 .select2-container--default .select2-results__option--highlighted[aria-selected]
@@ -158,7 +159,7 @@
 .checkbox
   cursor pointer
   display block
-  // margin-bottom 1rem
+  margin-bottom 2.4rem
   user-select none
   &__label
     background transparent
@@ -172,7 +173,7 @@
     vertical-align middle
     z-index 1
     &:after
-      color $main
+      color $primary
       content "\f00c"
       display none
       font-family 'FontAwesome'
